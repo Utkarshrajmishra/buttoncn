@@ -25,8 +25,8 @@ export const getComponent = async (fileName: string, folder: string) => {
 };
 
 export async function copyComponent(
-    state: CopyComponentState | undefined,
-    payload?: FormData
+    state: CopyComponentState,
+    payload: FormData
 ): Promise<CopyComponentState> {
     try {
         if (!payload) {
