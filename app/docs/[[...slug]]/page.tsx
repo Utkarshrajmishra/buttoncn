@@ -4,6 +4,9 @@ import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/mdx-components';
 import type { Metadata } from 'next';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
+import defaultMdxComponents from 'fumadocs-ui/mdx';
+import Preview from '@/components/mdx/preview';
+import { PreviewClient } from '@/components/mdx/preview-client';
 
 type Props = {
   params: {
@@ -30,7 +33,11 @@ export default async function Page({ params }: Props) {
       <DocsTitle>{typedPage.data.title}</DocsTitle>
       <DocsDescription>{typedPage.data.description}</DocsDescription>
       <DocsBody>
-        <MDX components={getMDXComponents({ a: createRelativeLink(source, page) })} />
+        <MDX components={{
+          ...defaultMdxComponents,
+          Preview,
+          PreviewClient,
+        }} />
       </DocsBody>
     </DocsPage>
   );
