@@ -1,7 +1,66 @@
 ---
-title: Hello World
+title: Flux Button
+description: motion-enhanced button featuring a subtle animated wave pattern that flows across the surface on hover, adding energy, depth, and visual feedback without overpowering the UI.
 ---
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import {PulseButtonDemo, PulseButtonDemo2, PulseButtonDemo3, PulseButtonDemo4, PulseButtonDemo5} from "@/components/buttoncn/invert-button";
+import { LiquidButtonDemo,LiquidButtonDemo2, LiquidButtonDemo3, LiquidButtonDemo4, LiquidButtonDemo5, LiquidButtonDemo6 } from '@/components/buttoncn/liquid-button-demo';
 
-## Introduction
+<Preview link="broken-button" >
+    <LiquidButtonDemo />
+</Preview>
 
-I love Anime.
+
+
+## Installation
+
+```bash title="npm"
+npx add shadcn@latest https:localhost:3000/components/broken-button
+```
+```bash title="bun"
+bun --bunx add shadcn@latest https:localhost:3000/components/broken-button
+
+```
+
+## Usage
+
+```tsx title="usage.tsx"
+import BrokenButton from "@/components/buttoncn/broken-button";
+
+export default function Usage() {
+    return (
+        <BrokenButton />
+    )
+}
+```
+
+## Examples
+
+#### Primary Variant
+<Preview link="broken-button" showPreview={false}>
+    <LiquidButtonDemo4 />
+</Preview>
+
+#### Secondary Variant
+<Preview link="broken-button" showPreview={false}>
+    <LiquidButtonDemo5 />
+</Preview>
+
+#### Outline  Variant
+<Preview link="broken-button" showPreview={false}>
+    <LiquidButtonDemo3 />
+</Preview>
+
+#### Custom Splash
+<Preview link="broken-button" showPreview={false}>
+    <LiquidButtonDemo6 />
+</Preview>
+
+
+
+
+
+
+
+
+

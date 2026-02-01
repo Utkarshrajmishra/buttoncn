@@ -244,7 +244,7 @@ export default function PreviewContent({
                                             )}
                                         />
                                     )}
-                                    <span>Copy</span>
+                                    <span>Open in V0</span>
                                 </Button>
                             </form>
                         )}

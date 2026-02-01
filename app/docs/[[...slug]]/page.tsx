@@ -1,5 +1,5 @@
 import { source } from '@/lib/source'
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/layouts/docs/page';
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/page';
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/mdx-components';
 import type { Metadata } from 'next';
@@ -7,7 +7,6 @@ import { createRelativeLink } from 'fumadocs-ui/mdx';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import Preview from '@/components/mdx/preview';
 import { PreviewClient } from '@/components/mdx/preview-client';
-
 type Props = {
   params: {
     slug?: string[];
@@ -29,7 +28,7 @@ export default async function Page({ params }: Props) {
   const MDX = typedPage.data.body;
 
   return (
-    <DocsPage toc={typedPage.data.toc} full={typedPage.data.full}>
+    <DocsPage toc={typedPage.data.toc} full={typedPage.data.full} className='tracking-tight max-w-3xl mx-auto'>
       <DocsTitle>{typedPage.data.title}</DocsTitle>
       <DocsDescription>{typedPage.data.description}</DocsDescription>
       <DocsBody>
