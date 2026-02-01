@@ -19,7 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "fumadocs-mdx:collections/*": ["./.source/*"]
+
     }
   },
   "include": [
