@@ -1,4 +1,5 @@
 // @ts-nocheck
+import * as __fd_glob_8 from "../content/docs/wave-button.mdx?collection=docs"
 import * as __fd_glob_7 from "../content/docs/sweep-button.mdx?collection=docs"
 import * as __fd_glob_6 from "../content/docs/splash-button.mdx?collection=docs"
 import * as __fd_glob_5 from "../content/docs/rainbow-button.mdx?collection=docs"
@@ -15,4 +16,4 @@ const create = server<typeof Config, import("fumadocs-mdx/runtime/types").Intern
   }
 }>({"doc":{"passthroughs":["extractedReferences"]}});
 
-export const docs = await create.docs("docs", "content/docs", {"meta.json": __fd_glob_0, }, {"fold-button.mdx": __fd_glob_1, "index.mdx": __fd_glob_2, "installation.mdx": __fd_glob_3, "pluse-button.mdx": __fd_glob_4, "rainbow-button.mdx": __fd_glob_5, "splash-button.mdx": __fd_glob_6, "sweep-button.mdx": __fd_glob_7, });
+export const docs = await create.docs("docs", "content/docs", {"meta.json": __fd_glob_0, }, {"fold-button.mdx": __fd_glob_1, "index.mdx": __fd_glob_2, "installation.mdx": __fd_glob_3, "pluse-button.mdx": __fd_glob_4, "rainbow-button.mdx": __fd_glob_5, "splash-button.mdx": __fd_glob_6, "sweep-button.mdx": __fd_glob_7, "wave-button.mdx": __fd_glob_8, });
