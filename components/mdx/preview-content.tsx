@@ -1,12 +1,9 @@
-
+"use client"
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Copy, Check, CheckCheck, Terminal } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { copyComponent } from "@/actions/copy-component-state";
-// import { OpenInV0Button } from "../open-in-v0-button";
-import { AnimatePresence, motion } from "motion/react";
+import { ArrowUpRight } from "lucide-react";
+
 
 export default function 
 PreviewContent({
@@ -18,11 +15,15 @@ PreviewContent({
     prePath: string;
     isBlock?: boolean;
 }) {
+
+    const Path=()=>{
+        console.log(link)
+    }
     
     return (
         <>
         <div className="flex items-center justify-between">
-            <Button variant="ghost" className="flex items-center gap-1 cursor-pointer text-sm text-decoration-none hover:bg-none hover:text-white hover:scale-110  "><ArrowUpRight className="size-5"/> Live Preview</Button>
+            <Button onClick={Path} variant="ghost" className="flex items-center gap-1 cursor-pointer text-sm text-decoration-none hover:bg-none hover:text-white hover:scale-110  "><ArrowUpRight className="size-5"/> Live Preview</Button>
             <Button className="dark:bg-neutral-800 bg-neutral-800 hover:bg-neutral-900 cursor-pointer text-neutral-300 hover:text-neutral-200 text-sm h-8">Open in V0 </Button>
         </div>
         </>

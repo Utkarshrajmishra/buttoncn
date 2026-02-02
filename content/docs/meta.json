@@ -1,0 +1,14 @@
+{
+    "pages": [
+        "components",
+        "---Introduction---",
+        "index",
+        "installation",
+         "---Components---",
+        "splash-button",
+        "fold-button",
+        "sweep-button",
+        "rainbow-button",
+        "pluse-button"
+    ]
+}

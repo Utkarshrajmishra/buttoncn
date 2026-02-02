@@ -121,6 +121,8 @@
 
   -color-fd-background: #272121;
   --color-fd-card: rgb(23 23 23);
+
+ 
 }
 
 @layer base {
@@ -130,4 +132,11 @@
   body {
     @apply bg-background text-foreground;
   }
+
+   pre code {
+    font-size: 0.94rem !important;    
+    
+  }
+
+  
 }
