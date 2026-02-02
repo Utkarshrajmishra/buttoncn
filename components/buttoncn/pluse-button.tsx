@@ -60,10 +60,9 @@ const PulseButton = React.forwardRef<HTMLButtonElement, PulseButtonProps>(
         className={cn(pulseButtonVariants({ variant, size }), className)}
         {...props}
       >
-        {/* Text */}
         <span className="relative z-10">{children}</span>
 
-        {/* Pulse SVG */}
+       
         <svg
           style={{ color: svgColor }}
           className="pointer-events-none absolute inset-0 w-full h-full 
