@@ -11,6 +11,12 @@
         "rainbow-button",
         "wave-button",
         "pluse-button",
-        "shimmer-button"
+        "shimmer-button",
+        "sweep-shimmer-button",
+        "expand-button",
+        "slide-icon-button",
+        "glow-button",
+        "peel-button" ,
+        "shadow-pop-button"
     ]
 }
