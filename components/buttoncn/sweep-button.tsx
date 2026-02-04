@@ -7,23 +7,24 @@ export interface SweepButtonProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     sweepColor?: string
     backgroundColor?: string
-    textColor?: string
+  
 }
 
 const SweepButton = React.forwardRef<HTMLButtonElement, SweepButtonProps>(
-    ({ className, children, sweepColor = "#22d3ee", backgroundColor = "#083344", textColor, ...props }, ref) => {
-        const finalTextColor = textColor || sweepColor
+    ({ className, children, sweepColor = "#22d3ee", backgroundColor = "#083344", ...props }, ref) => {
+       
         
         return (
             <button
                 ref={ref}
                 className={cn(
-                    "border border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group",
+                    `border border-b-4 text-${sweepColor} cursor-pointer font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group`,
+
                     className
                 )}
                 style={{
                     backgroundColor: backgroundColor,
-                    color: finalTextColor,
+                   
                     borderColor: sweepColor,
                 }}
                 {...props}
