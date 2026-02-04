@@ -2,12 +2,14 @@
 title: Glow Button
 description: Motion-enhanced button featuring a subtle animated wave pattern that flows across the surface on hover, adding energy, depth, and visual feedback without overpowering the UI.
 ---
-import GlowButtonPreview from '@/components/buttoncn-preview/glow-button-preview';
 
-<Preview link="glow-button" >
-    <GlowButtonPreview />
+import { TypeTable } from "fumadocs-ui/components/type-table";
+
+import GlowButtonPreview from "@/components/buttoncn-preview/glow-button-preview";
+
+<Preview link="glow-button">
+  <GlowButtonPreview />
 </Preview>
-
 
 ## Installation
 
@@ -15,15 +17,28 @@ import GlowButtonPreview from '@/components/buttoncn-preview/glow-button-preview
 npx shadcn@latest add http://localhost/300/components/buttocn/splash-button
 ```
 
-
 ## Usage
 
 ```tsx title="usage.tsx"
-import BrokenButton from "@/components/buttoncn/broken-button";
+import GlowButton from "../buttoncn/glow-button";
+const GlowButtonPreview = () => {
+  return <GlowButton>Hover Me</GlowButton>;
+};
 
-export default function Usage() {
-    return (
-        <BrokenButton />
-    )
-}
+export default GlowButtonPreview;
 ```
+
+## API Reference
+
+### Glow Button
+
+The **Glow Button** component is a wrapper around the **button** element that adds a variety of styles and functionality.
+
+<TypeTable
+  type={{
+    className: {
+      description: "Allows additional styling to be applied to the button.",
+      type: "string",
+    },
+  }}
+/>

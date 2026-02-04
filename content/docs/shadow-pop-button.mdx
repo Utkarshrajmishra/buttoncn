@@ -2,21 +2,64 @@
 title: Shadow Pop Button
 description: Motion-enhanced button featuring a subtle animated wave pattern that flows across the surface on hover, adding energy, depth, and visual feedback without overpowering the UI.
 ---
-import ShadowPopButtonPreview from '@/components/buttoncn-preview/shadow-pop-button-preview';
+import {ShadowPopButtonPreview,ShadowPopButtonPreviewShadowColors} from '@/components/buttoncn-preview/shadow-pop-button-preview';
+import { TypeTable } from "fumadocs-ui/components/type-table";
 
-<Preview link="shadow-pop-button" >
-    <ShadowPopButtonPreview />
+
+<Preview link="shimmer-button">
+  <ShadowPopButtonPreview />
 </Preview>
 
+## Installation
 
-npx shadcn@latest add http://localhost/300/components/buttocn/shadow-pop-button
+```npm
+npx shadcn@latest add http://localhost/300/components/buttocn/splash-button
+```
+
+## Usage
 
 ```tsx title="usage.tsx"
 import BrokenButton from "@/components/buttoncn/broken-button";
 
 export default function Usage() {
-    return (
-        <BrokenButton />
+  return <BrokenButton />;
+}
+```
+
+## Examples
+
+### Shadow Color
+
+<Preview link="shimmer-button">
+  <ShadowPopButtonPreviewShadowColors />
+</Preview>
+
+
+```tsx title="usage.tsx"
+import BrokenButton from "@/components/buttoncn/broken-button";
+
+export const ShadowPopButtonPreviewShadowColors=()=>{
+    return(
+        <ShadowPopButton shadowColors={["#F44336", "#00BCD4"]}>Shadow Pop Button</ShadowPopButton>
     )
 }
 ```
+
+### API Reference
+
+### Shadow Pop Button
+
+<TypeTable
+  type={{
+    shadowColors: {
+      description: "The color of the shadow. The array must be of size 2. (shadowColors[0] is bottom-level shadow and shadowColors[1] is top-level shadow) ",
+      type: "hexcode array(2)",
+      default: "['#366ff4ff', '#d45f00ff']",
+    },
+    className: {
+      description: "Allows additional styling to be applied to the button.",
+
+      type: "string",
+    },
+  }}
+/>

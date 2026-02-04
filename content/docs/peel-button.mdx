@@ -2,7 +2,9 @@
 title: Peel Button
 description: Motion-enhanced button featuring a subtle animated wave pattern that flows across the surface on hover, adding energy, depth, and visual feedback without overpowering the UI.
 ---
-import PeelButtonPreview from '@/components/buttoncn-preview/peel-button-preview';
+import { TypeTable } from "fumadocs-ui/components/type-table";
+
+import {PeelButtonPreview, PeelButtonColors} from '@/components/buttoncn-preview/peel-button-preview';
 
 <Preview link="peel-button" >
     <PeelButtonPreview />
@@ -27,3 +29,33 @@ export default function Usage() {
     )
 }
 ```
+
+## Examples
+
+<Preview link="peel-button" >
+    <PeelButtonColors />
+</Preview>
+
+
+## API Reference
+
+### Peel Button
+
+The **Peel Button** component is a wrapper around the **button** element that adds a variety of styles and functionality.
+
+
+
+<TypeTable
+  type={{
+    colors: {
+      description: "The color of the peel animation. The array must be of size 3.",
+      type: "hexcode array(3)",
+      default: "['#bbf7d0', '#4ade80', '#15803d']",
+    },
+     className: {
+      description: "Allows additional styling to be applied to the button.",
+
+      type: "string",
+    }
+  }}
+/>

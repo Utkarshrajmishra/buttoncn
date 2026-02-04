@@ -8,4 +8,12 @@ const PeelButtonPreview = () => {
     )
 }
 
-export default PeelButtonPreview
+const PeelButtonColors = () => {
+    return (
+        <div>
+            <PeelButton colors={["#bfdbfe", "#3b82f6", "#1e3a8a"]}>Hover Me</PeelButton>
+        </div>
+    )
+}
+
+export  {PeelButtonPreview, PeelButtonColors}

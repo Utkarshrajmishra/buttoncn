@@ -1,7 +1,7 @@
 import GlowButton from "../buttoncn/glow-button"
 const GlowButtonPreview=()=>{
     return(
-        <GlowButton>GlowButton</GlowButton>
+        <GlowButton>Hover Me</GlowButton>
     )
 }
 
