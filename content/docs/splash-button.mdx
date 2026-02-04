@@ -139,7 +139,7 @@ The **Splash Button** component is a wrapper around the **button** element that 
     variant: {
       description: 'Visual style of the splash button',
      
-      type: 'default  primary | secondary | outline',
+      type: 'default | primary | secondary | outline',
       default: 'default',
     },
     size: {
@@ -152,5 +152,10 @@ The **Splash Button** component is a wrapper around the **button** element that 
       type: 'hexcode',
       default: '#F54927',
     },
+     className: {
+      description: "Allows additional styling to be applied to the button.",
+
+      type: "string",
+    }
   }}
 />

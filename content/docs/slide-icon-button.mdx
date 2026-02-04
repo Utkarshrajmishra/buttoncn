@@ -2,12 +2,19 @@
 title: Slide Icon Button
 description: Motion-enhanced button featuring a subtle animated wave pattern that flows across the surface on hover, adding energy, depth, and visual feedback without overpowering the UI.
 ---
-import SlideIconButtonPreview from '@/components/buttoncn-preview/slide-icon-button-preview';
 
-<Preview link="slide-icon-button" >
-    <SlideIconButtonPreview />
+import { TypeTable } from "fumadocs-ui/components/type-table";
+
+import {
+  SlideIconButtonPreview,
+  SlideIconButtonIcon,
+  SlideIconButtonPreviewDirection,
+  SlideIconButtonSlideColor,
+} from "@/components/buttoncn-preview/slide-icon-button-preview";
+
+<Preview link="slide-icon-button">
+  <SlideIconButtonPreview />
 </Preview>
-
 
 ## Installation
 
@@ -15,15 +22,87 @@ import SlideIconButtonPreview from '@/components/buttoncn-preview/slide-icon-but
 npx shadcn@latest add http://localhost/300/components/buttocn/splash-button
 ```
 
-
 ## Usage
 
 ```tsx title="usage.tsx"
 import BrokenButton from "@/components/buttoncn/broken-button";
 
 export default function Usage() {
-    return (
-        <BrokenButton />
-    )
+  return <BrokenButton />;
 }
 ```
+
+## Examples
+
+### Icon
+
+<Preview link="slide-icon-button">
+  <SlideIconButtonIcon />
+</Preview>
+
+```tsx title="usage.tsx"
+import BrokenButton from "@/components/buttoncn/broken-button";
+
+export default function Usage() {
+  return <BrokenButton />;
+}
+```
+
+### Direction
+
+<Preview link="slide-icon-button">
+  <SlideIconButtonPreviewDirection />
+</Preview>
+
+```tsx title="usage.tsx"
+import BrokenButton from "@/components/buttoncn/broken-button";
+
+export default function Usage() {
+  return <BrokenButton />;
+}
+```
+
+### Slide Color
+
+<Preview link="slide-icon-button">
+  <SlideIconButtonSlideColor />
+</Preview>
+
+```tsx title="usage.tsx"
+import BrokenButton from "@/components/buttoncn/broken-button";
+
+const SlideIconButtonSlideColor = () => {
+  return <SlideIconButton slideColor="#f87070ff">Hover Me</SlideIconButton>;
+};
+```
+
+## API Reference
+
+### Slide Icon Button
+
+The **Slide Icon Button** component is a wrapper around the **button** element that adds a variety of styles and functionality.
+
+<TypeTable
+  type={{
+    slideColor: {
+      description: "Defines the color of the slide animation.",
+
+      type: "hexcode",
+      default: "#4ade80",
+    },
+    icon: {
+      description: "Defines the color of the slide animation.",
+
+      type: "ReactNode",
+    },
+    direction: {
+      description: "Allows to change the direction of the slider.",
+      type: "left | right",
+      default: "left",
+    },
+    className:{
+        description: "Allows additional styling to be applied to the button.",
+        type: "string",
+    }
+  }}
+/>

@@ -2,7 +2,9 @@
 title: Expand Button
 description: Motion-enhanced button featuring a subtle animated wave pattern that flows across the surface on hover, adding energy, depth, and visual feedback without overpowering the UI.
 ---
-import ExpandButtonPreview from '@/components/buttoncn-preview/expand-button-preview';
+import { TypeTable } from "fumadocs-ui/components/type-table";
+
+import {ExpandButtonPreview, ExpandButtonIcon, ExpandButtonColor, ExpandButtonPreviewShowSpinner} from '@/components/buttoncn-preview/expand-button-preview';
 
 <Preview link="expand-button" >
     <ExpandButtonPreview />
@@ -27,3 +29,91 @@ export default function Usage() {
     )
 }
 ```
+
+## Examples
+
+### Icon
+
+<Preview link="expand-button" >
+    <ExpandButtonIcon />
+</Preview>
+
+
+```tsx title="usage.tsx"
+import BrokenButton from "@/components/buttoncn/broken-button";
+
+const ExpandButtonIcon=()=>{
+    return(
+        <ExpandButton icon={<InstagramIcon/>}>Instagram</ExpandButton>
+    )
+}
+
+```
+
+### Button Color
+
+<Preview link="expand-button" >
+    <ExpandButtonColor />
+</Preview>
+
+
+```tsx title="usage.tsx"
+import BrokenButton from "@/components/buttoncn/broken-button";
+
+const ExpandButtonColor=()=>{
+    return(
+        <ExpandButton buttonColor="#f75336ff">Expand Button</ExpandButton>
+    )
+}
+
+```
+
+
+
+### Button Color
+
+<Preview link="expand-button" >
+    <ExpandButtonPreviewShowSpinner />
+</Preview>
+
+
+```tsx title="usage.tsx"
+import BrokenButton from "@/components/buttoncn/broken-button";
+
+
+const ExpandButtonPreviewShowSpinner=()=>{
+    return(
+        <ExpandButton showSpinner={false}>Expand Button</ExpandButton>
+    )
+}
+```
+
+
+## API Reference
+
+### Expand Button
+
+The **Expand Button** component is a wrapper around the **button** element that adds a variety of styles and functionality.
+
+
+<TypeTable
+  type={{
+    buttonColor: {
+      description: "The color of the button.",
+      type: "string",
+    },
+    icon: {
+      description: "The icon to be displayed in the button.",
+      type: "React.ReactNode",
+    },
+    showSpinner: {
+      description: "Whether to display the spinner.",
+      type: "boolean",
+    },
+     className: {
+      description: "Allows additional styling to be applied to the button.",
+
+      type: "string",
+    }
+  }}
+/>
