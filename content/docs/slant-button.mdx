@@ -2,7 +2,8 @@
 title: Slant Button
 description: Motion-enhanced button featuring a subtle animated wave pattern that flows across the surface on hover, adding energy, depth, and visual feedback without overpowering the UI.
 ---
-import SlantButtonPreview from '@/components/buttoncn-preview/slant-button-preview';
+import {SlantButtonPreview,SlantButtonPreviewColors} from '@/components/buttoncn-preview/slant-button-preview';
+import { TypeTable } from 'fumadocs-ui/components/type-table';
 
 <Preview link="slant-button" >
     <SlantButtonPreview />
@@ -27,3 +28,44 @@ export default function Usage() {
     )
 }
 ```
+
+## Examples
+
+## Slant colors
+
+<Preview link="slant-button" >
+    <SlantButtonPreviewColors />
+</Preview>
+
+```tsx title="usage.tsx"
+import BrokenButton from "@/components/buttoncn/broken-button";
+
+export default function Usage() {
+    return (
+        <BrokenButton />
+    )
+}
+```
+
+## API Reference
+
+### Slant Button
+
+The **Slant Button** component is a wrapper around the **button** element that adds a variety of styles and functionality.
+
+<TypeTable
+  type={{
+    color: {
+      description: 'Color of the animated slant animation,',
+     
+      type: 'hexcode array(3)',
+      default: '["#cce3cdff", "#a1ee87ff", "#69e546ff"]',
+    },
+   
+     className: {
+      description: "Allows additional styling to be applied to the button.",
+
+      type: "string",
+    }
+  }}
+/>

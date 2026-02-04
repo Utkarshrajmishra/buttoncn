@@ -5,4 +5,11 @@ const SlantButtonPreview=()=>{
         <SlantButton>Hover Me</SlantButton>
     )
 }
-export default SlantButtonPreview
+
+
+const SlantButtonPreviewColors=()=>{
+    return(
+        <SlantButton colors={["#cce3cdff", "#a1ee87ff", "#69e546ff"]}>Hover Me</SlantButton>
+    )
+}
+export {SlantButtonPreview,SlantButtonPreviewColors}
