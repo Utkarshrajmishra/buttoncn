@@ -8,4 +8,12 @@ const WaveButtonPreview = () => {
     )
 }
 
-export default WaveButtonPreview
+const WaveButtonPreviewWaveColors=()=>{
+    return(
+        <div>
+            <WaveButton waveColors={["#7f1d1d", "#991b1b", "#b91c1c", "#dc2626", "#ef4444"]}>Wave Button</WaveButton>
+        </div>
+    )
+}
+
+export {WaveButtonPreviewWaveColors,WaveButtonPreview}

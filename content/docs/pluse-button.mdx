@@ -2,7 +2,8 @@
 title: Pulse Button
 description: Motion-enhanced button featuring a subtle animated wave pattern that flows across the surface on hover, adding energy, depth, and visual feedback without overpowering the UI.
 ---
-import PluseButtonPreview from '@/components/buttoncn-preview/pluse-button-preview';
+import {PluseButtonPreview,PluseButtonSeondary,PluseButtonOutline,PluseButtonGhost,PluseButtonDestructive,PluseButtonPluseColor} from '@/components/buttoncn-preview/pluse-button-preview';
+import { TypeTable } from 'fumadocs-ui/components/type-table';
 
 <Preview link="pluse-button" >
     <PluseButtonPreview />
@@ -27,3 +28,135 @@ export default function Usage() {
     )
 }
 ```
+
+## Examples
+
+### Seondary
+<Preview link="pluse-button">
+    <PluseButtonSeondary />
+</Preview>
+
+```tsx title="usage.tsx"
+import PluseButton from "@/components/buttoncn/pluse-button";
+
+const PluseButtonSeondary = () => {
+    return (
+        <PluseButton variant="secondary">
+            Pluse Button
+        </PluseButton>
+    )
+}
+
+export default PluseButtonSeondary
+```
+
+### Outline
+<Preview link="pluse-button">
+    <PluseButtonOutline />
+</Preview>
+
+```tsx title="usage.tsx"
+import PluseButton from "@/components/buttoncn/pluse-button";
+
+const PluseButtonOutline = () => {
+    return (
+        <PluseButton variant="outline">
+            Pluse Button
+        </PluseButton>
+    )
+}
+
+export default PluseButtonOutline
+```
+
+### Ghost
+<Preview link="pluse-button">
+    <PluseButtonGhost />
+</Preview>
+
+```tsx title="usage.tsx"
+import PluseButton from "@/components/buttoncn/pluse-button";
+
+const PluseButtonGhost = () => {
+    return (
+        <PluseButton variant="ghost">
+            Pluse Button
+        </PluseButton>
+    )
+}
+
+export default PluseButtonGhost
+```
+
+### Destructive
+<Preview link="pluse-button">
+    <PluseButtonDestructive />
+</Preview>
+
+```tsx title="usage.tsx"
+import PluseButton from "@/components/buttoncn/pluse-button";
+
+const PluseButtonDestructive = () => {
+    return (
+        <PluseButton variant="destructive">
+            Pluse Button
+        </PluseButton>
+    )
+}
+
+export default PluseButtonDestructive
+```
+
+### Pluse Color
+<Preview link="pluse-button">
+    <PluseButtonPluseColor />
+</Preview>
+
+```tsx title="usage.tsx"
+import PluseButton from "@/components/buttoncn/pluse-button";
+
+const PluseButtonPluseColor=()=>{
+    return(
+        <PulseButton pulseColor="#fffff" className="bg-green-800 hover:bg-green-900">
+            Pulse Button
+        </PulseButton>
+    )
+}
+
+export default PluseButtonPluseColor
+```
+
+## API Reference
+
+### Splash Button
+
+The **Splash Button** component is a wrapper around the **button** element that adds a variety of styles and functionality.
+
+<TypeTable
+  type={{
+    variant: {
+      description: 'Visual style of the splash button',
+     
+      type: 'default  primary | secondary | outline',
+      default: 'default',
+    },
+    size: {
+      description: 'Controls button size',
+      type: 'default | sm | lg | icon',
+      default: 'default',
+    },
+    pulseColor: {
+      description: 'Color of the animated pulse  effect',
+      type: 'hexcode',
+      default: '#ffffff',
+    },
+  }}
+/>
+
+
+
+
+
+
+
+

@@ -44,7 +44,7 @@ const getAutoColor = (variant?: string | null) => {
     case "ghost":
       return "rgba(139,92,246,0.35)"
     case "destructive":
-      return "rgba(255,255,255,0.35)"
+      return "rgba(255, 255, 255, 0.35)"
     default:
       return "rgba(255,255,255,0.35)"
   }

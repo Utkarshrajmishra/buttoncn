@@ -26,7 +26,7 @@ const WaveButton = React.forwardRef<HTMLButtonElement, WaveButtonProps>(
             <button
                 ref={ref}
                 className={cn(
-                    "relative border text-white duration-500 group cursor-pointer overflow-hidden h-14 w-56 rounded-md p-2 flex justify-center items-center font-extrabold",
+                    "relative border text-white duration-500 group cursor-pointer overflow-hidden h-14 w-56 rounded-md p-2 flex justify-center items-center font-semibold",
                     className
                 )}
                 style={{

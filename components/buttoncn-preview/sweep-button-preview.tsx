@@ -6,5 +6,17 @@ const SweepButtonPreview=()=>{
     )
 }
 
+const SweepButtonPreviewSweepColor=()=>{
+    return(
+        <SweepButton sweepColor="#a1f78dff" >Sweep Button</SweepButton>
+    )
+}
 
-export default SweepButtonPreview
+const SweepButtonPreviewBackgroundColor=()=>{
+    return(
+        <SweepButton backgroundColor="#4e2d0eff" >Sweep Button</SweepButton>
+    )
+}
+
+
+export {SweepButtonPreview,SweepButtonPreviewSweepColor,SweepButtonPreviewBackgroundColor}
