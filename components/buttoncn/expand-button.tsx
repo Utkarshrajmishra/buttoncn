@@ -1,8 +1,8 @@
 "use client"
+import { ArrowRight, VolleyballIcon } from "lucide-react"
 
 import * as React from "react"
 import { cn } from "@/lib/utils"
-import { ArrowRight, VolleyballIcon } from "lucide-react"
 
 export interface ExpandButtonProps
     extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -12,17 +12,17 @@ export interface ExpandButtonProps
 }
 
 const ExpandButton = React.forwardRef<HTMLButtonElement, ExpandButtonProps>(
-    ({ 
-        className, 
-        children, 
+    ({
+        className,
+        children,
         buttonColor = "#6336f7",
         icon,
         showSpinner = true,
-        ...props 
+        ...props
     }, ref) => {
         return (
             <div className="h-full w-full flex items-center justify-center text-black dark:text-white">
-                <div 
+                <div
                     className="group cursor-pointer border bg-zinc-200 dark:bg-zinc-800 border-zinc-400 dark:border-zinc-500/30 gap-2 h-[60px] flex items-center p-[10px] rounded-full"
                 >
                     <button
@@ -44,7 +44,7 @@ const ExpandButton = React.forwardRef<HTMLButtonElement, ExpandButtonProps>(
                             {children || "Get Started"}
                         </p>
                     </button>
-                    <div 
+                    <div
                         className="group-hover:ml-4 ease-in-out transition-all size-[24px] flex items-center justify-center rounded-full border border-zinc-400 dark:border-zinc-600"
                     >
                         <ArrowRight className="w-[14px] h-[14px] group-hover:rotate-180 ease-in-out transition-all" />

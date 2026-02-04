@@ -12,7 +12,7 @@ const splashButtonVariants = cva(
       variant: {
         default: "bg-gray-900 text-white",
         primary: "bg-green-600 text-white",
-        secondary: "bg-neutral-500 text-neutral-600",
+        secondary: "bg-neutral-500 hover:text-white text-neutral-600",
         outline:
           "border-1 border border-neutral-500 text-neutral-400 hover:text-white",
 

@@ -15,7 +15,7 @@ const FoldButton = React.forwardRef<HTMLButtonElement, FoldButtonProps>(
         ref={ref}
         {...props}
         className={cn(
-          "relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-sky-500 rounded-md group",
+          "relative flex items-center cursor-pointer px-6 py-3 overflow-hidden font-medium transition-all bg-sky-500 rounded-md group",
           className
         )}
       >

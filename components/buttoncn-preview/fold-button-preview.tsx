@@ -1,9 +1,16 @@
-import FoldButton from "../buttoncn/foldbutton"
+import FoldButton from "../buttoncn/fold-button"
 
 const FoldButtonPreview = () => {
     return (
-    <FoldButton>Fold Button</FoldButton>
+    <FoldButton>Hover Me</FoldButton>
 )
 }
 
-export default FoldButtonPreview
+
+const FoldButtonPreviewFoldColor=()=>{
+    return(
+        <FoldButton foldColor="#d53713ff" className="bg-red-400">Hover Me</FoldButton>
+    )
+}
+
+export {FoldButtonPreview,FoldButtonPreviewFoldColor}
