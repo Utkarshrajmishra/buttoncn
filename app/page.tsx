@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import ShinnyButton2 from "@/components/buttoncn-preview/rainbow-button-preview";
 export default function Home() {
   return (

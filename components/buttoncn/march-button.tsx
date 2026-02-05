@@ -36,29 +36,32 @@ const MarchButton = React.forwardRef<HTMLButtonElement, MarchButtonProps>(
             ${MARCH_COLORS[4]} 66.6%,
             ${MARCH_COLORS[4]} 83.25%,
             ${MARCH_COLORS[5]} 83.25%,
-            ${MARCH_COLORS[5]} 100%,
-            ${MARCH_COLORS[0]} 100%
+            ${MARCH_COLORS[5]} 100%
         )`
 
         return (
             <>
                 <style dangerouslySetInnerHTML={{
                     __html: `
-                        @keyframes march {
-                            to {
-                                background-position: 150px;
+                        @keyframes shuttle {
+                            0%, 100% {
+                                background-position: 0% center;
+                            }
+                            50% {
+                                background-position: 100% center;
                             }
                         }
-                        .march-btn-active {
-                            animation: march 2s linear infinite !important;
+                        .shuttle-btn-active {
+                            animation: shuttle 2s ease-in-out infinite !important;
+                            background-size: 200% 100% !important;
                         }
                     `
                 }} />
                 <button
                     ref={ref}
                     className={cn(
-                        "w-36 py-4 text-white font-bold text-base rounded cursor-pointer border-0 transition-all duration-200",
-                        isHovered && "march-btn-active",
+                        "px-6 py-3  font-semibold text-base rounded cursor-pointer border-1 transition-all duration-200",
+                        isHovered ? "text-white border-transparent shuttle-btn-active" : "dark:text-white text-neutral-700 dark:border-neutral-700 border-neutral-400  bg-transparent",
                         className
                     )}
                     style={isHovered ? {
