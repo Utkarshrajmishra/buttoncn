@@ -11,8 +11,8 @@
     {
       "type": "registry:component",
       "content": "\"use client\";\r\n\r\nimport * as React from \"react\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nexport interface GlowButtonProps\r\n  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}\r\n\r\nconst GlowButton = React.forwardRef<HTMLButtonElement, GlowButtonProps>(\r\n  ({ className, children, ...props }, ref) => {\r\n    return (\r\n      <div className=\"relative inline-block group\">\r\n\r\n        <div className=\"absolute inset-0 z-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-500 blur-2xl bg-gradient-to-r from-green-500 to-yellow-500\" />\r\n\r\n        <div className=\"relative rounded-xl p-[2px] bg-gradient-to-r from-green-500 to-yellow-500\">\r\n          \r\n       \r\n          <button\r\n            ref={ref}\r\n            className={cn(\r\n              \"relative flex overflow-hidden items-center justify-center whitespace-nowrap px-6 h-12 rounded-xl bg-black text-white font-semibold text-lg\",\r\n              className\r\n            )}\r\n            {...props}\r\n          >\r\n            {children || \"Get Started\"}\r\n\r\n          </button>\r\n        </div>\r\n      </div>\r\n    );\r\n  }\r\n);\r\n\r\nGlowButton.displayName = \"GlowButton\";\r\n\r\nexport default GlowButton\r\n",
-      "path": "/components/buttoncn/glow-button.tsx",
-      "target": "/components/buttoncn/glow-button.tsx"
+      "path": "components/buttoncn/glow-button.tsx",
+      "target": "components/ui/glow-button.tsx"
     }
   ]
 }

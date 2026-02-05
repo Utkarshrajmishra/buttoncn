@@ -11,8 +11,8 @@
     {
       "type": "registry:component",
       "content": "\"use client\"\r\n\r\nimport * as React from \"react\"\r\nimport { cn } from \"@/lib/utils\"\r\n\r\nexport interface SweepButtonProps\r\n    extends React.ButtonHTMLAttributes<HTMLButtonElement> {\r\n    sweepColor?: string\r\n    backgroundColor?: string\r\n  \r\n}\r\n\r\nconst SweepButton = React.forwardRef<HTMLButtonElement, SweepButtonProps>(\r\n    ({ className, children, sweepColor = \"#22d3ee\", backgroundColor = \"#083344\", ...props }, ref) => {\r\n       \r\n        \r\n        return (\r\n            <button\r\n                ref={ref}\r\n                className={cn(\r\n                    `border border-b-4  text-white cursor-pointer font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group`,\r\n\r\n                    className\r\n                )}\r\n                style={{\r\n                    backgroundColor: backgroundColor,\r\n                   \r\n                    borderColor: sweepColor,\r\n                }}\r\n                {...props}\r\n            >\r\n                <span \r\n                    className=\"absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500\"\r\n                    style={{\r\n                        backgroundColor: sweepColor,\r\n                        boxShadow: `0 0 10px 10px ${sweepColor}33`,\r\n                    }}\r\n                ></span>\r\n                {children || \"Hover Me\"}\r\n            </button>\r\n        )\r\n    }\r\n)\r\n\r\nSweepButton.displayName = \"SweepButton\"\r\n\r\nexport default SweepButton",
-      "path": "/components/buttoncn/sweep-button.tsx",
-      "target": "/components/buttoncn/sweep-button.tsx"
+      "path": "components/buttoncn/sweep-button.tsx",
+      "target": "components/ui/sweep-button.tsx"
     }
   ]
 }

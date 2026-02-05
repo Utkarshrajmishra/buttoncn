@@ -11,8 +11,8 @@
     {
       "type": "registry:component",
       "content": "\"use client\"\r\n\r\nimport * as React from \"react\"\r\nimport { cn } from \"@/lib/utils\"\r\n\r\nexport interface SweepShimmerButtonProps\r\n    extends React.ButtonHTMLAttributes<HTMLButtonElement> { }\r\n\r\nconst SweepShimmerButton = React.forwardRef<HTMLButtonElement, SweepShimmerButtonProps>(\r\n    ({ className, children, ...props }, ref) => {\r\n        return (\r\n            <button\r\n                ref={ref}\r\n                className={cn(\r\n                    \"flex overflow-hidden items-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 bg-black text-white shadow hover:bg-black/90 h-12 font-semibold px-4 py-2 whitespace-pre md:flex group relative justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:border-neutral-700 border border-neutral-800\",\r\n                    className\r\n                )}\r\n                {...props}\r\n            >\r\n                <span className=\"absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40\"></span>\r\n                {children}\r\n            </button>\r\n        )\r\n    }\r\n)\r\n\r\nSweepShimmerButton.displayName = \"SweepShimmerButton\"\r\n\r\nexport default SweepShimmerButton",
-      "path": "/components/buttoncn/sweep-shimmer-button.tsx",
-      "target": "/components/buttoncn/sweep-shimmer-button.tsx"
+      "path": "components/buttoncn/sweep-shimmer-button.tsx",
+      "target": "components/ui/sweep-shimmer-button.tsx"
     }
   ]
 }
