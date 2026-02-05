@@ -28,7 +28,7 @@ export const component: Registry = [
   {
     name: "fold-button",
     type: "registry:component",
-    dependencies: ["lucide-react"],
+    dependencies: [],
     registryDependencies: ["button"],
     files: [
       {
@@ -40,7 +40,7 @@ export const component: Registry = [
   {
     name: "glass-button",
     type: "registry:component",
-    dependencies: ["lucide-react"],
+    dependencies: [""],
     registryDependencies: ["button"],
     files: [
       {
@@ -52,7 +52,7 @@ export const component: Registry = [
   {
     name: "glow-button",
     type: "registry:component",
-    dependencies: ["lucide-react"],
+    dependencies: [""],
     registryDependencies: ["button"],
     files: [
       {
@@ -76,7 +76,7 @@ export const component: Registry = [
   {
     name: "march-button",
     type: "registry:component",
-    dependencies: ["lucide-react"],
+    dependencies: [""],
     registryDependencies: ["button"],
     files: [
       {
@@ -100,7 +100,7 @@ export const component: Registry = [
   {
     name: "rainbow-button",
     type: "registry:component",
-    dependencies: ["lucide-react"],
+    dependencies: [""],
     registryDependencies: ["button"],
     files: [
       {
@@ -158,13 +158,13 @@ export const component: Registry = [
     ],
   },
   {
-    name: "social-icon-button",
+    name: "icon-button",
     type: "registry:component",
     dependencies: ["lucide-react"],
     registryDependencies: ["button"],
     files: [
       {
-        path: "components/buttoncn/social-icon-button.tsx",
+        path: "components/buttoncn/icon-button.tsx",
         type: "registry:component",
       },
     ],
@@ -172,7 +172,7 @@ export const component: Registry = [
   {
     name: "splash-button",
     type: "registry:component",
-    dependencies: ["lucide-react"],
+    dependencies: ["class-variance-authority"],
     registryDependencies: ["button"],
     files: [
       {

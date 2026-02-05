@@ -1,9 +1,7 @@
 {
   "name": "fold-button",
   "type": "registry:component",
-  "dependencies": [
-    "lucide-react"
-  ],
+  "dependencies": [],
   "registryDependencies": [
     "button"
   ],

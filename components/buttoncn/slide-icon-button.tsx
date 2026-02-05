@@ -12,7 +12,7 @@ export interface SlideIconButtonProps
 }
 
 const SlideIconButton = React.forwardRef<HTMLButtonElement, SlideIconButtonProps>(
-  (
+(
     {
       className,
       children,
