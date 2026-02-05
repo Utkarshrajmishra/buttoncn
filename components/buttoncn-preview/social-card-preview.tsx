@@ -1,9 +1,42 @@
-import InstaBtn from "../buttoncn/social-card-button"
+import { Youtube } from "lucide-react"
+import IconButton from "../buttoncn/icon-button"
 
 const SocialButtonPreview=()=>{
     return(
-        <InstaBtn/>
+        <IconButton />
     )
 }
 
-export default SocialButtonPreview
+
+const SocialButtonPreviewIcon=()=>{
+    return(
+        <IconButton icon={<Youtube/>}
+        
+        />
+    )
+}
+
+
+
+const SocialButtonPreviewGradient=()=>{
+    return(
+        <IconButton gradient={["#eeff00ff", "#CC0000"]}/>
+    )
+}
+
+
+
+const SocialButtonPreviewDirectionAngle=()=>{
+    return(
+        <IconButton gradient={["#eeff00ff", "#CC0000"]} gradientDirection={180}/>
+    )
+}
+
+const SocialButtonPreviewDirectionValue=()=>{
+    return(
+        <IconButton gradient={["#eeff00ff", "#CC0000"]} gradientDirection={"top"}/>
+    )
+}
+
+
+export {SocialButtonPreview,SocialButtonPreviewIcon,SocialButtonPreviewGradient,SocialButtonPreviewDirectionAngle,SocialButtonPreviewDirectionValue}

@@ -48,7 +48,7 @@ const SplashButtonPreviewSplashColor=()=>{
     return(
         <div>
             <SplashButton splashColor="#7CE36D" >
-                Hover Me
+                Hover Me 
             </SplashButton>
         </div>
     )

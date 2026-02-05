@@ -1,10 +1,11 @@
 ---
-title: Social Button
+title: Icon Button
 description: Motion-enhanced button featuring a subtle animated wave pattern that flows across the surface on hover, adding energy, depth, and visual feedback without overpowering the UI.
 ---
-import  SocialButtonPreview from '@/components/buttoncn-preview/social-card-preview';
+import  {SocialButtonPreview,SocialButtonPreviewIcon,SocialButtonPreviewGradient,SocialButtonPreviewDirectionAngle,SocialButtonPreviewDirectionValue} from '@/components/buttoncn-preview/social-card-preview';
+import { TypeTable } from 'fumadocs-ui/components/type-table';
 
-<Preview link="insta-button" >
+<Preview link="icon-button" >
     <SocialButtonPreview />
 </Preview>
 
@@ -12,18 +13,118 @@ import  SocialButtonPreview from '@/components/buttoncn-preview/social-card-prev
 ## Installation
 
 ```npm
-npx shadcn@latest add http://localhost/300/components/buttocn/splash-button
+npx shadcn@latest add http://localhost/300/r/pixel-button.json
 ```
 
 
 ## Usage
 
 ```tsx title="usage.tsx"
-import BrokenButton from "@/components/buttoncn/broken-button";
+import IconButton from "../buttoncn/icon-button"
 
-export default function Usage() {
-    return (
-        <BrokenButton />
+const SocialButtonPreview=()=>{
+    return(
+        <IconButton />
     )
 }
+
+export default SocialButtonPreview
 ```
+
+## Examples
+
+### Icon
+
+<Preview link="icon-button" >
+    <SocialButtonPreviewIcon />
+</Preview>
+
+
+```tsx title="usage.tsx"
+import IconButton from "../buttoncn/icon-button"
+
+const SocialButtonPreview=()=>{
+    return(
+        <IconButton icon={<Youtube/>}
+        
+        />
+    )
+}
+
+export default SocialButtonPreview
+```
+
+
+### Gradient Color
+
+
+<Preview link="icon-button" >
+    <SocialButtonPreviewGradient />
+</Preview>
+
+
+```tsx title="usage.tsx"
+import IconButton from "../buttoncn/icon-button"
+
+const SocialButtonPreview=()=>{
+    return(
+       <IconButton gradient={["#eeff00ff", "#CC0000"]}/>
+        
+        />
+    )
+}
+
+export default SocialButtonPreview
+```
+
+### Gradient Direction 
+
+
+<Preview link="icon-button" >
+    <SocialButtonPreviewDirectionAngle />
+</Preview>
+
+
+```tsx title="usage.tsx"
+import IconButton from "../buttoncn/icon-button"
+
+const SocialButtonPreview=()=>{
+    return(
+        <IconButton gradient={["#eeff00ff", "#CC0000"]} gradientDirection={180}/>
+        
+        />
+    )
+}
+
+export default SocialButtonPreview
+```
+
+## API Reference
+
+### Icon Button
+
+The **Icon Button** component is a wrapper around the **button** element that adds a variety of styles and functionality.
+
+<TypeTable
+  type={{
+    icon: {
+      description: 'Icon to be displayed on the button',
+     
+      type: 'ReactNode',
+     
+    },
+    gradient: {
+      description: 'Gradient color of the button. The size of array must not be more than 5.',
+      type: 'hex array(5)',
+      },
+    gradientDirection: {
+      description: 'Direction of the gradient',
+      type: 'number',
+      
+    },
+    
+  }}
+/>
+
+
+

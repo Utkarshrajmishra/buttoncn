@@ -1,0 +1,18 @@
+{
+  "name": "animated-gradient-button",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "type": "registry:component",
+      "content": "\"use client\"\r\n\r\nimport * as React from \"react\"\r\nimport { cn } from \"@/lib/utils\"\r\n\r\nexport interface GradientGlowButtonProps\r\n  extends React.ButtonHTMLAttributes<HTMLButtonElement> {\r\n  labelClassName?: string\r\n}\r\n\r\nconst GradientGlowButton = React.forwardRef<\r\n  HTMLButtonElement,\r\n  GradientGlowButtonProps\r\n>(({ className, labelClassName, children, ...props }, ref) => {\r\n  return (\r\n    <button\r\n      ref={ref}\r\n      className={cn(\r\n        \"group  relative flex h-[60px] w-[180px] cursor-pointer items-center justify-center rounded-[10px] bg-[#3a3a3a] text-white font-semibold text-[18px] transition-all duration-300\",\r\n        className\r\n      )}\r\n      {...props}\r\n    >\r\n      <span className=\"absolute left-1/2 top-1/2 -z-20 h-[115%] w-[106%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[inherit] blur-[10px] transition-all duration-300 group-hover:blur-[5px]\">\r\n        <span\r\n          className=\"absolute -left-[10%] top-1/2 aspect-square w-[110%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[10px] animate-[spin_2s_linear_infinite] group-hover:blur-[5px]\"\r\n          style={{\r\n            backgroundImage: `linear-gradient(\r\n              90deg,\r\n              hsl(226,81%,64%),\r\n              hsl(271,81%,64%),\r\n              hsl(316,81%,64%),\r\n              hsl(1,81%,64%),\r\n              hsl(46,81%,64%),\r\n              hsl(91,81%,64%),\r\n              hsl(136,81%,64%),\r\n              hsl(181,81%,64%)\r\n            )`,\r\n          }}\r\n        />\r\n      </span>\r\n\r\n      {/* ✨ Glass highlight layer */}\r\n      <span\r\n        className=\"absolute left-1/2 top-1/2 -z-10 rounded-[inherit] bg-white/20 backdrop-blur-md transition-all duration-300\"\r\n        style={{\r\n          boxShadow: \"0 8px 32px rgba(31,38,135,0.37)\",\r\n          width: \"106%\",\r\n          height: \"120%\",\r\n          transform: \"translate(-50%, -50%)\",\r\n        }}\r\n      />\r\n\r\n      {/* 🏷 Label */}\r\n      <span\r\n        className={cn(\r\n          \"relative z-10 flex h-[45px] w-[156px] items-center justify-center rounded-[22px] bg-gradient-to-b from-[#2b2b2b] to-[#444]\",\r\n          labelClassName\r\n        )}\r\n      >\r\n        {children}\r\n      </span>\r\n    </button>\r\n  )\r\n})\r\n\r\nGradientGlowButton.displayName = \"GradientGlowButton\"\r\n\r\nexport { GradientGlowButton }\r\n",
+      "path": "/components/buttoncn/animated-gradient-button.tsx",
+      "target": "/components/buttoncn/animated-gradient-button.tsx"
+    }
+  ]
+}

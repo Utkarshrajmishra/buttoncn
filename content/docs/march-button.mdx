@@ -2,7 +2,8 @@
 title: March Button
 description: Motion-enhanced button featuring a subtle animated wave pattern that flows across the surface on hover, adding energy, depth, and visual feedback without overpowering the UI.
 ---
-import MarchButtonPreview from '@/components/buttoncn-preview/march-button-preview';
+import {MarchButtonPreview,MarchButtonPreviewMarchColor}  from '@/components/buttoncn-preview/march-button-preview';
+import { TypeTable } from 'fumadocs-ui/components/type-table';
 
 <Preview link="march-button" >
     <MarchButtonPreview />
@@ -27,3 +28,48 @@ export default function Usage() {
     )
 }
 ```
+
+## Examples
+
+### March Color
+
+<Preview link="march-button" >
+    <MarchButtonPreviewMarchColor />
+</Preview>
+
+```tsx title="usage.tsx"
+import MarchButton from "../buttoncn/march-button"
+
+const MarchButtonPreviewMarchColor=()=>{
+    return(
+        <MarchButton marchColor={["#582424ff", "#e9bfbfff", "#9B5DE5", "#00BBF9", "#FEE440"]}>Hover Me</MarchButton>
+    )
+}
+
+export default MarchButtonPreviewMarchColor
+
+```
+
+## API Reference
+
+### March Button
+
+The **March Button** component is a wrapper around the **button** element that adds a variety of styles and functionality.
+
+
+<TypeTable
+  type={{
+    marchColor: {
+      description: 'Color of the animated march wave effect. The length of the array should be 5.',
+     
+      type: 'hexcode array(5)',
+      default:"[#582424ff, #e9bfbfff, #9B5DE5, #00BBF9, #FEE440]"
+    
+    },
+    className: {
+      description: "Allows additional styling to be applied to the button.",
+
+      type: "string",
+    }
+  }}
+/>

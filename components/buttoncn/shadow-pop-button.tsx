@@ -19,7 +19,7 @@ const ShadowPopButton = React.forwardRef<HTMLButtonElement, ShadowPopButtonProps
             <button
                 ref={ref}
                 className={cn(
-                    "cursor-pointer uppercase bg-neutral-800  px-4 py-2 active:translate-x-0.5 active:translate-y-0.5 transition",
+                    "cursor-pointer text-white uppercase bg-neutral-800  px-4 py-2 active:translate-x-0.5 active:translate-y-0.5 transition",
                     className
                 )}
                 style={{

@@ -3,7 +3,7 @@ import PeelButton from "../buttoncn/peel-button"
 const PeelButtonPreview = () => {
     return (
         <div>
-            <PeelButton>Hover Me</PeelButton>
+            <PeelButton>Hover Me kpkpkpk</PeelButton>
         </div>
     )
 }

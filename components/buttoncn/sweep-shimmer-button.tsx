@@ -12,7 +12,7 @@ const SweepShimmerButton = React.forwardRef<HTMLButtonElement, SweepShimmerButto
             <button
                 ref={ref}
                 className={cn(
-                    "flex overflow-hidden items-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 bg-black text-white shadow hover:bg-black/90 h-9 px-4 py-2 max-w-52 whitespace-pre md:flex group relative w-full justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:border-neutral-700 border border-neutral-800",
+                    "flex overflow-hidden items-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 bg-black text-white shadow hover:bg-black/90 h-12 font-semibold px-4 py-2 whitespace-pre md:flex group relative justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:border-neutral-700 border border-neutral-800",
                     className
                 )}
                 {...props}

@@ -1,0 +1,18 @@
+{
+  "name": "slide-icon-button",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "type": "registry:component",
+      "content": "\"use client\"\r\n\r\nimport * as React from \"react\"\r\nimport { cn } from \"@/lib/utils\"\r\nimport { ArrowLeft } from \"lucide-react\"\r\n\r\nexport interface SlideIconButtonProps\r\n    extends React.ButtonHTMLAttributes<HTMLButtonElement> {\r\n    slideColor?: string\r\n    icon?: React.ReactNode\r\n    direction?: \"left\" | \"right\"\r\n}\r\n\r\nconst SlideIconButton = React.forwardRef<HTMLButtonElement, SlideIconButtonProps>(\r\n    ({ \r\n        className, \r\n        children, \r\n        slideColor = \"#4ade80\",\r\n        icon,\r\n        direction = \"left\",\r\n        ...props \r\n    }, ref) => {\r\n        const isLeft = direction === \"left\"\r\n        \r\n        return (\r\n            <button\r\n                ref={ref}\r\n                className={cn(\r\n                    \"bg-white text-center w-48 rounded-2xl h-14 relative text-black text-xl font-semibold group\",\r\n                    className\r\n                )}\r\n                type=\"button\"\r\n                {...props}\r\n            >\r\n                <div\r\n                    className={cn(\r\n                        \"rounded-xl h-12 w-1/4 flex items-center justify-center absolute top-[4px] z-10 duration-500\",\r\n                        isLeft ? \"left-1 group-hover:w-[184px]\" : \"right-1 group-hover:w-[184px]\"\r\n                    )}\r\n                    style={{\r\n                        backgroundColor: slideColor,\r\n                    }}\r\n                >\r\n                    {icon ? icon : (\r\n                        isLeft ? (\r\n                            <ArrowLeft className=\"w-6 h-6 text-black\" />\r\n                        ) : (\r\n                            <svg\r\n                                xmlns=\"http://www.w3.org/2000/svg\"\r\n                                viewBox=\"0 0 1024 1024\"\r\n                                height=\"25px\"\r\n                                width=\"25px\"\r\n                            >\r\n                                <path\r\n                                    d=\"M768 480H128a32 32 0 1 0 0 64h640a32 32 0 0 0 0-64z\"\r\n                                    fill=\"#000000\"\r\n                                />\r\n                                <path\r\n                                    d=\"m754.752 512-265.408 265.344a32 32 0 0 0 45.312 45.312l288-288a32 32 0 0 0 0-45.312l-288-288a32 32 0 1 0-45.312 45.312L754.752 512z\"\r\n                                    fill=\"#000000\"\r\n                                />\r\n                            </svg>\r\n                        )\r\n                    )}\r\n                </div>\r\n                <p className={cn(\r\n                    isLeft ? \"translate-x-2\" : \"-translate-x-2\"\r\n                )}>\r\n                    {children || (isLeft ? \"Go Back\" : \"Go Forward\")}\r\n                </p>\r\n            </button>\r\n        )\r\n    }\r\n)\r\n\r\nSlideIconButton.displayName = \"SlideIconButton\"\r\n\r\nexport default SlideIconButton",
+      "path": "/components/buttoncn/slide-icon-button.tsx",
+      "target": "/components/buttoncn/slide-icon-button.tsx"
+    }
+  ]
+}

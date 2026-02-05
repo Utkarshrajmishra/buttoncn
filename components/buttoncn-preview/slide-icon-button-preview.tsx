@@ -16,7 +16,7 @@ const SlideIconButtonIcon=()=>{
 
 const SlideIconButtonPreviewDirection=()=>{
     return(
-        <SlideIconButton direction="right">Hover Me</SlideIconButton>
+        <SlideIconButton direction="right">Hover Me </SlideIconButton>
     )
 }
 

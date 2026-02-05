@@ -4,12 +4,35 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 import { Instagram } from "lucide-react"
 
-export interface InstaBtnProps
-    extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+export interface IconButtonProps
+    extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    gradient?: string | string[]
+    gradientDirection?:  number | "top" | "bottom" | "left" | "right" | "top-left" | "top-right" | "bottom-left" | "bottom-right"
+    icon?: React.ReactNode
+}
 
-const InstaBtn = React.forwardRef<HTMLButtonElement, InstaBtnProps>(
-    ({ className, ...props }, ref) => {
+const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
+    ({ 
+        className, 
+        gradient = ["#f09433", "#e6683c", "#dc2743", "#cc2366", "#bc1888"],
+        gradientDirection = 45,
+        icon,
+        ...props 
+    }, ref) => {
         const [isHovered, setIsHovered] = React.useState(false)
+
+        // Convert gradient to CSS string
+        const gradientStyle = React.useMemo(() => {
+            if (typeof gradient === 'string') {
+                return gradient
+            }
+            
+            const direction = typeof gradientDirection === 'number' 
+                ? `${gradientDirection}deg` 
+                : gradientDirection
+            
+            return `linear-gradient(${direction}, ${gradient.join(', ')})`
+        }, [gradient, gradientDirection])
 
         return (
             <button
@@ -22,7 +45,6 @@ const InstaBtn = React.forwardRef<HTMLButtonElement, InstaBtnProps>(
                 onMouseLeave={() => setIsHovered(false)}
                 {...props}
             >
-                {/* SVG Container */}
                 <span
                     className="w-full h-full flex items-center justify-center rounded-xl border transition-all duration-300 relative z-10"
                     style={{
@@ -33,14 +55,13 @@ const InstaBtn = React.forwardRef<HTMLButtonElement, InstaBtnProps>(
                             : "transparent",
                     }}
                 >
-                    <Instagram className="w-6 h-6 text-white" />
+                    {icon || <Instagram className="w-6 h-6 text-white" />}
                 </span>
 
-                {/* Gradient BG */}
                 <span
                     className="absolute inset-0 rounded-[9px] pointer-events-none transition-all duration-300"
                     style={{
-                        background: "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)",
+                        background: gradientStyle,
                         zIndex: 0,
                         transform: isHovered ? "rotate(35deg)" : "rotate(0deg)",
                         transformOrigin: "bottom",
@@ -51,6 +72,6 @@ const InstaBtn = React.forwardRef<HTMLButtonElement, InstaBtnProps>(
     }
 )
 
-InstaBtn.displayName = "InstaBtn"
+IconButton.displayName = "IconButton"
 
-export default InstaBtn
+export default IconButton

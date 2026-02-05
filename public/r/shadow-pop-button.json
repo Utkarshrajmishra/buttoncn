@@ -1,0 +1,18 @@
+{
+  "name": "shadow-pop-button",
+  "type": "registry:component",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "type": "registry:component",
+      "content": "\"use client\"\r\n\r\nimport * as React from \"react\"\r\nimport { cn } from \"@/lib/utils\"\r\n\r\nexport interface ShadowPopButtonProps\r\n    extends React.ButtonHTMLAttributes<HTMLButtonElement> {\r\n    shadowColors?: [string, string]\r\n}\r\n\r\nconst ShadowPopButton = React.forwardRef<HTMLButtonElement, ShadowPopButtonProps>(\r\n    ({ \r\n        className, \r\n        children, \r\n        shadowColors = [\"#F44336\", \"#00BCD4\"],\r\n        ...props \r\n    }, ref) => {\r\n        return (\r\n            <button\r\n                ref={ref}\r\n                className={cn(\r\n                    \"cursor-pointer uppercase bg-neutral-800  px-4 py-2 active:translate-x-0.5 active:translate-y-0.5 transition\",\r\n                    className\r\n                )}\r\n                style={{\r\n                    boxShadow: undefined,\r\n                }}\r\n                onMouseEnter={(e) => {\r\n                    e.currentTarget.style.boxShadow = `0.5rem 0.5rem ${shadowColors[0]}, -0.5rem -0.5rem ${shadowColors[1]}`\r\n                }}\r\n                onMouseLeave={(e) => {\r\n                    e.currentTarget.style.boxShadow = \"none\"\r\n                }}\r\n                {...props}\r\n            >\r\n                {children || \"Hover me\"}\r\n            </button>\r\n        )\r\n    }\r\n)\r\n\r\nShadowPopButton.displayName = \"ShadowPopButton\"\r\n\r\nexport default ShadowPopButton",
+      "path": "/components/buttoncn/shadow-pop-button.tsx",
+      "target": "/components/buttoncn/shadow-pop-button.tsx"
+    }
+  ]
+}

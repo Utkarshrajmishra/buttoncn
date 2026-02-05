@@ -18,7 +18,7 @@ const SweepButton = React.forwardRef<HTMLButtonElement, SweepButtonProps>(
             <button
                 ref={ref}
                 className={cn(
-                    `border border-b-4 text-${sweepColor} cursor-pointer font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group`,
+                    `border border-b-4  text-white cursor-pointer font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group`,
 
                     className
                 )}
