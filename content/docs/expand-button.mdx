@@ -2,21 +2,25 @@
 title: Expand Button
 description: A pill-shaped button that expands on hover, featuring an optional icon or spinner and a playful arrow indicator for an engaging call-to-action feel.
 ---
+
 import { TypeTable } from "fumadocs-ui/components/type-table";
 
-import {ExpandButtonPreview, ExpandButtonIcon, ExpandButtonColor, ExpandButtonPreviewShowSpinner} from '@/components/buttoncn-preview/expand-button-preview';
+import {
+  ExpandButtonPreview,
+  ExpandButtonIcon,
+  ExpandButtonColor,
+  ExpandButtonPreviewShowSpinner,
+} from "@/components/buttoncn-preview/expand-button-preview";
 
-<Preview link="expand-button" >
-    <ExpandButtonPreview />
+<Preview link="expand-button">
+  <ExpandButtonPreview />
 </Preview>
-
 
 ## Installation
 
 ```npm
-npx shadcn@latest add http://localhost/300/r/expand-button.json
+npx shadcn@latest add http://localhost:3000/r/expand-button.json
 ```
-
 
 ## Usage
 
@@ -24,9 +28,7 @@ npx shadcn@latest add http://localhost/300/r/expand-button.json
 import BrokenButton from "@/components/buttoncn/broken-button";
 
 export default function Usage() {
-    return (
-        <BrokenButton />
-    )
+  return <BrokenButton />;
 }
 ```
 
@@ -34,67 +36,51 @@ export default function Usage() {
 
 ### Icon
 
-<Preview link="expand-button" >
-    <ExpandButtonIcon />
+<Preview link="expand-button">
+  <ExpandButtonIcon />
 </Preview>
-
 
 ```tsx title="usage.tsx"
 import BrokenButton from "@/components/buttoncn/broken-button";
 
-const ExpandButtonIcon=()=>{
-    return(
-        <ExpandButton icon={<InstagramIcon/>}>Instagram</ExpandButton>
-    )
-}
-
+const ExpandButtonIcon = () => {
+  return <ExpandButton icon={<InstagramIcon />}>Instagram</ExpandButton>;
+};
 ```
 
 ### Button Color
 
-<Preview link="expand-button" >
-    <ExpandButtonColor />
+<Preview link="expand-button">
+  <ExpandButtonColor />
 </Preview>
-
 
 ```tsx title="usage.tsx"
 import BrokenButton from "@/components/buttoncn/broken-button";
 
-const ExpandButtonColor=()=>{
-    return(
-        <ExpandButton buttonColor="#f75336ff">Expand Button</ExpandButton>
-    )
-}
-
+const ExpandButtonColor = () => {
+  return <ExpandButton buttonColor="#f75336ff">Expand Button</ExpandButton>;
+};
 ```
-
-
 
 ### Button Color
 
-<Preview link="expand-button" >
-    <ExpandButtonPreviewShowSpinner />
+<Preview link="expand-button">
+  <ExpandButtonPreviewShowSpinner />
 </Preview>
-
 
 ```tsx title="usage.tsx"
 import BrokenButton from "@/components/buttoncn/broken-button";
 
-
-const ExpandButtonPreviewShowSpinner=()=>{
-    return(
-        <ExpandButton showSpinner={false}>Expand Button</ExpandButton>
-    )
-}
+const ExpandButtonPreviewShowSpinner = () => {
+  return <ExpandButton showSpinner={false}>Expand Button</ExpandButton>;
+};
 ```
-
 
 ## API Reference
 
 ### Expand Button
 
 The **Expand Button** component is a wrapper around the **button** element that adds a variety of styles and functionality.
-
 
 <TypeTable
   type={{
@@ -115,5 +101,6 @@ The **Expand Button** component is a wrapper around the **button** element that 
 
       type: "string",
     }
-  }}
+
+}}
 />

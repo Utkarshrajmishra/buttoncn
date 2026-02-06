@@ -2,20 +2,19 @@
 title: Sweep Shimmer Button
 description: A minimal button with a soft sweeping shimmer on hover, adding subtle motion and depth to a clean, modern design.
 ---
-import SweepShimmerButtonPreview from '@/components/buttoncn-preview/sweep-shimmer-button-preview';
+
+import SweepShimmerButtonPreview from "@/components/buttoncn-preview/sweep-shimmer-button-preview";
 import { TypeTable } from "fumadocs-ui/components/type-table";
 
-<Preview link="sweep-shimmer-button" >
-    <SweepShimmerButtonPreview />
+<Preview link="sweep-shimmer-button">
+  <SweepShimmerButtonPreview />
 </Preview>
-
 
 ## Installation
 
 ```npm
-npx shadcn@latest add http://localhost/300/r/sweep-shimmer-button.json
+npx shadcn@latest add http://localhost:3000/r/sweep-shimmer-button.json
 ```
-
 
 ## Usage
 
@@ -23,14 +22,9 @@ npx shadcn@latest add http://localhost/300/r/sweep-shimmer-button.json
 import BrokenButton from "@/components/buttoncn/broken-button";
 
 export default function Usage() {
-    return (
-        <BrokenButton />
-    )
+  return <BrokenButton />;
 }
 ```
-
-
-
 
 ## API Reference
 
@@ -46,5 +40,6 @@ The **Splash Button** component is a wrapper around the **button** element that 
 
       type: "string",
     }
-  }}
+
+}}
 />

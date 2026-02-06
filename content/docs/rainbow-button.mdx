@@ -2,34 +2,30 @@
 title: Rainbow Button
 description: A vibrant button with an animated rainbow gradient border and subtle glow, adding a playful pop of color on hover and interaction.
 ---
-import RainbowButtonPreview from '@/components/buttoncn-preview/rainbow-button-preview';
-import { TypeTable } from 'fumadocs-ui/components/type-table';
 
-<Preview link="rainbow-button" >
-    <RainbowButtonPreview />
+import RainbowButtonPreview from "@/components/buttoncn-preview/rainbow-button-preview";
+import { TypeTable } from "fumadocs-ui/components/type-table";
+
+<Preview link="rainbow-button">
+  <RainbowButtonPreview />
 </Preview>
-
 
 ## Installation
 
 ```npm
-npx shadcn@latest add http://localhost/300/r/rainbow-button.json
+npx shadcn@latest add http://localhost:3000/r/rainbow-button.json
 ```
-
 
 ## Usage
 
 ```tsx title="usage.tsx"
-import RainbowButton from "../buttoncn/rainbow-button"
+import RainbowButton from "../buttoncn/rainbow-button";
 
-const RainbowButtonPreview=()=>{
-    return(
-      <RainbowButton >Rainbow Button</RainbowButton>
-    )
-}
+const RainbowButtonPreview = () => {
+  return <RainbowButton>Rainbow Button</RainbowButton>;
+};
 
-export default RainbowButtonPreview
-
+export default RainbowButtonPreview;
 ```
 
 ### API Reference
@@ -59,12 +55,6 @@ description: 'Defines the color of the animated sweep wave and the button border
       description: "The content of the button.",
       type: "React.ReactNode",
     },
-  }}
+
+}}
 />
-
-
-
-
-
-
-

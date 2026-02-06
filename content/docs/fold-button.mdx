@@ -2,21 +2,23 @@
 title: Fold Button
 description: A button with a smooth fold-style hover animation and customizable accent color. Clean, interactive, and visually engaging.
 ---
-import { TypeTable } from 'fumadocs-ui/components/type-table';
 
-import {FoldButtonPreview, FoldButtonPreviewFoldColor} from '@/components/buttoncn-preview/fold-button-preview';
+import { TypeTable } from "fumadocs-ui/components/type-table";
 
-<Preview link="fold-button" >
-    <FoldButtonPreview />
+import {
+  FoldButtonPreview,
+  FoldButtonPreviewFoldColor,
+} from "@/components/buttoncn-preview/fold-button-preview";
+
+<Preview link="fold-button">
+  <FoldButtonPreview />
 </Preview>
-
 
 ## Installation
 
 ```npm
-npx shadcn@latest add http://localhost/300/r/fold-button.json
+npx shadcn@latest add http://localhost:3000/r/fold-button.json
 ```
-
 
 ## Usage
 
@@ -24,34 +26,29 @@ npx shadcn@latest add http://localhost/300/r/fold-button.json
 import FoldButton from "@/components/buttoncn/fold-button";
 
 export default function Usage() {
-    return (
-         <FoldButton >Hover Me</FoldButton>
-    )
+  return <FoldButton>Hover Me</FoldButton>;
 }
 ```
 
 ## Examples
 
-### Fold Color 
+### Fold Color
 
-
-<Preview link="fold-button" >
-    <FoldButtonPreviewFoldColor />
+<Preview link="fold-button">
+  <FoldButtonPreviewFoldColor />
 </Preview>
-
 
 ```tsx title="usage.tsx"
 import FoldButton from "@/components/buttoncn/fold-button";
 
 export default function Usage() {
-    return (
-         <FoldButton className="bg-red-400" foldColor="#137ad5ff">Hover Me</FoldButton>
-    )
+  return (
+    <FoldButton className="bg-red-400" foldColor="#137ad5ff">
+      Hover Me
+    </FoldButton>
+  );
 }
-
 ```
-
-
 
 ## API Reference
 
@@ -72,8 +69,6 @@ The **Fold Button** component is a wrapper around the **button** element that ad
 
       type: "string",
     },
-  }}
+
+}}
 />
-
-
-

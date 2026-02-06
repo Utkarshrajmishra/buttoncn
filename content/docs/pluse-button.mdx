@@ -2,20 +2,26 @@
 title: Pulse Button
 description: Motion-enhanced button featuring a subtle animated wave pattern that flows across the surface on hover, adding energy, depth, and visual feedback without overpowering the UI.
 ---
-import {PluseButtonPreview,PluseButtonSeondary,PluseButtonOutline,PluseButtonGhost,PluseButtonDestructive,PluseButtonPluseColor} from '@/components/buttoncn-preview/pluse-button-preview';
-import { TypeTable } from 'fumadocs-ui/components/type-table';
 
-<Preview link="pluse-button" >
-    <PluseButtonPreview />
+import {
+  PluseButtonPreview,
+  PluseButtonSeondary,
+  PluseButtonOutline,
+  PluseButtonGhost,
+  PluseButtonDestructive,
+  PluseButtonPluseColor,
+} from "@/components/buttoncn-preview/pluse-button-preview";
+import { TypeTable } from "fumadocs-ui/components/type-table";
+
+<Preview link="pluse-button">
+  <PluseButtonPreview />
 </Preview>
-
 
 ## Installation
 
 ```npm
-npx shadcn@latest add http://localhost/300/components/buttocn/splash-button
+npx shadcn@latest add http://localhost:3000/components/buttocn/splash-button
 ```
-
 
 ## Usage
 
@@ -23,107 +29,97 @@ npx shadcn@latest add http://localhost/300/components/buttocn/splash-button
 import BrokenButton from "@/components/buttoncn/broken-button";
 
 export default function Usage() {
-    return (
-        <BrokenButton />
-    )
+  return <BrokenButton />;
 }
 ```
 
 ## Examples
 
 ### Seondary
+
 <Preview link="pluse-button">
-    <PluseButtonSeondary />
+  <PluseButtonSeondary />
 </Preview>
 
 ```tsx title="usage.tsx"
 import PluseButton from "@/components/buttoncn/pluse-button";
 
 const PluseButtonSeondary = () => {
-    return (
-        <PluseButton variant="secondary">
-            Pluse Button
-        </PluseButton>
-    )
-}
+  return <PluseButton variant="secondary">Pluse Button</PluseButton>;
+};
 
-export default PluseButtonSeondary
+export default PluseButtonSeondary;
 ```
 
 ### Outline
+
 <Preview link="pluse-button">
-    <PluseButtonOutline />
+  <PluseButtonOutline />
 </Preview>
 
 ```tsx title="usage.tsx"
 import PluseButton from "@/components/buttoncn/pluse-button";
 
 const PluseButtonOutline = () => {
-    return (
-        <PluseButton variant="outline">
-            Pluse Button
-        </PluseButton>
-    )
-}
+  return <PluseButton variant="outline">Pluse Button</PluseButton>;
+};
 
-export default PluseButtonOutline
+export default PluseButtonOutline;
 ```
 
 ### Ghost
+
 <Preview link="pluse-button">
-    <PluseButtonGhost />
+  <PluseButtonGhost />
 </Preview>
 
 ```tsx title="usage.tsx"
 import PluseButton from "@/components/buttoncn/pluse-button";
 
 const PluseButtonGhost = () => {
-    return (
-        <PluseButton variant="ghost">
-            Pluse Button
-        </PluseButton>
-    )
-}
+  return <PluseButton variant="ghost">Pluse Button</PluseButton>;
+};
 
-export default PluseButtonGhost
+export default PluseButtonGhost;
 ```
 
 ### Destructive
+
 <Preview link="pluse-button">
-    <PluseButtonDestructive />
+  <PluseButtonDestructive />
 </Preview>
 
 ```tsx title="usage.tsx"
 import PluseButton from "@/components/buttoncn/pluse-button";
 
 const PluseButtonDestructive = () => {
-    return (
-        <PluseButton variant="destructive">
-            Pluse Button
-        </PluseButton>
-    )
-}
+  return <PluseButton variant="destructive">Pluse Button</PluseButton>;
+};
 
-export default PluseButtonDestructive
+export default PluseButtonDestructive;
 ```
 
 ### Pluse Color
+
 <Preview link="pluse-button">
-    <PluseButtonPluseColor />
+  <PluseButtonPluseColor />
 </Preview>
 
 ```tsx title="usage.tsx"
 import PluseButton from "@/components/buttoncn/pluse-button";
 
-const PluseButtonPluseColor=()=>{
-    return(
-        <PulseButton pulseColor="#fffff" className="bg-green-800 hover:bg-green-900">
-            Pulse Button
-        </PulseButton>
-    )
-}
+const PluseButtonPluseColor = () => {
+  return (
+    <PulseButton
+      pulseColor="#fffff"
+      className="bg-green-800 hover:bg-green-900"
+    >
+      Pulse Button
+    </PulseButton>
+  );
+};
 
-export default PluseButtonPluseColor
+export default PluseButtonPluseColor;
 ```
 
 ## API Reference
@@ -155,13 +151,6 @@ The **Splash Button** component is a wrapper around the **button** element that 
 
       type: "string",
     },
-  }}
+
+}}
 />
-
-
-
-
-
-
-
-

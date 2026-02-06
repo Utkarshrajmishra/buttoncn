@@ -2,9 +2,12 @@
 title: Shadow Pop Button
 description: A bold button that pops on hover with contrasting dual-color shadows, creating a punchy, retro-style depth effect.
 ---
-import {ShadowPopButtonPreview,ShadowPopButtonPreviewShadowColors} from '@/components/buttoncn-preview/shadow-pop-button-preview';
-import { TypeTable } from "fumadocs-ui/components/type-table";
 
+import {
+  ShadowPopButtonPreview,
+  ShadowPopButtonPreviewShadowColors,
+} from "@/components/buttoncn-preview/shadow-pop-button-preview";
+import { TypeTable } from "fumadocs-ui/components/type-table";
 
 <Preview link="shimmer-button">
   <ShadowPopButtonPreview />
@@ -13,7 +16,7 @@ import { TypeTable } from "fumadocs-ui/components/type-table";
 ## Installation
 
 ```npm
-npx shadcn@latest add http://localhost/300/r/shadow-pop-button.json
+npx shadcn@latest add http://localhost:3000/r/shadow-pop-button.json
 ```
 
 ## Usage
@@ -34,15 +37,16 @@ export default function Usage() {
   <ShadowPopButtonPreviewShadowColors />
 </Preview>
 
-
 ```tsx title="usage.tsx"
 import BrokenButton from "@/components/buttoncn/broken-button";
 
-export const ShadowPopButtonPreviewShadowColors=()=>{
-    return(
-        <ShadowPopButton shadowColors={["#F44336", "#00BCD4"]}>Shadow Pop Button</ShadowPopButton>
-    )
-}
+export const ShadowPopButtonPreviewShadowColors = () => {
+  return (
+    <ShadowPopButton shadowColors={["#F44336", "#00BCD4"]}>
+      Shadow Pop Button
+    </ShadowPopButton>
+  );
+};
 ```
 
 ### API Reference
@@ -61,5 +65,6 @@ export const ShadowPopButtonPreviewShadowColors=()=>{
 
       type: "string",
     },
-  }}
+
+}}
 />

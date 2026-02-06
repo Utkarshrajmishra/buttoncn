@@ -2,9 +2,14 @@
 title: Sweep Button
 description: A button with a glowing sweep animation that slides across on hover, featuring customizable sweep and background colors for a sharp, modern look.
 ---
-import { TypeTable } from 'fumadocs-ui/components/type-table';
 
-import {SweepButtonPreview, SweepButtonPreviewSweepColor,SweepButtonPreviewBackgroundColor} from "@/components/buttoncn-preview/sweep-button-preview";
+import { TypeTable } from "fumadocs-ui/components/type-table";
+
+import {
+  SweepButtonPreview,
+  SweepButtonPreviewSweepColor,
+  SweepButtonPreviewBackgroundColor,
+} from "@/components/buttoncn-preview/sweep-button-preview";
 
 <Preview link="sweep-button">
   <SweepButtonPreview />
@@ -13,7 +18,7 @@ import {SweepButtonPreview, SweepButtonPreviewSweepColor,SweepButtonPreviewBackg
 ## Installation
 
 ```npm
-npx shadcn@latest add http://localhost/300/r/sweep-button.json
+npx shadcn@latest add http://localhost:3000/r/sweep-button.json
 ```
 
 ## Usage
@@ -38,8 +43,7 @@ export default function Usage() {
 import SweepButton from "../buttoncn/sweep-button";
 
 const SweepButtonPreviewSweepColor = () => {
-
-//The border  inherits sweepColor value by default, but can be customized using className.
+  //The border  inherits sweepColor value by default, but can be customized using className.
 
   return <SweepButton sweepColor="#a1f78dff">Sweep Button</SweepButton>;
 };
@@ -62,7 +66,6 @@ const SweepButtonPreviewSweepColor = () => {
 
 export default SweepButtonPreviewSweepColor;
 ```
-
 
 ## API Reference
 
@@ -88,10 +91,7 @@ description: 'Defines the color of the animated sweep wave and the button border
       description: "Allows additional styling to be applied to the button.",
 
       type: "string",
+
 },
-  }}
+}}
 />
-
-
-
-

@@ -2,20 +2,25 @@
 title: Splash Button
 description: Motion-enhanced button featuring a subtle animated wave pattern that flows across the surface on hover, adding energy, depth, and visual feedback without overpowering the UI.
 ---
-import { TypeTable } from 'fumadocs-ui/components/type-table';
-import { SplashButtonPreview, SplashButtonPreviewPrimary, SplashButtonPreviewSecondary, SplashButtonPreviewOutline, SplashButtonPreviewSplashColor } from '@/components/buttoncn-preview/splash-button-preview';
 
-<Preview link="splash-button" >
-    <SplashButtonPreview />
+import { TypeTable } from "fumadocs-ui/components/type-table";
+import {
+  SplashButtonPreview,
+  SplashButtonPreviewPrimary,
+  SplashButtonPreviewSecondary,
+  SplashButtonPreviewOutline,
+  SplashButtonPreviewSplashColor,
+} from "@/components/buttoncn-preview/splash-button-preview";
+
+<Preview link="splash-button">
+  <SplashButtonPreview />
 </Preview>
-
 
 ## Installation
 
 ```npm
-npx shadcn@latest add http://localhost/300/r/splash-button.josn
+npx shadcn@latest add http://localhost:3000/r/splash-button.josn
 ```
-
 
 ## Usage
 
@@ -23,13 +28,11 @@ npx shadcn@latest add http://localhost/300/r/splash-button.josn
 import { SplashButton } from "../buttoncn/splash-button";
 
 const SplashButtonPreview = () => {
-    return (
-        <div>
-            <SplashButton >
-                Hover Me
-            </SplashButton>
-        </div>
-    );
+  return (
+    <div>
+      <SplashButton>Hover Me</SplashButton>
+    </div>
+  );
 };
 
 export default SplashButtonPreview;
@@ -39,60 +42,51 @@ export default SplashButtonPreview;
 
 ### Variant primary
 
-
-<Preview link="splash-button" >
-    <SplashButtonPreviewPrimary />
+<Preview link="splash-button">
+  <SplashButtonPreviewPrimary />
 </Preview>
 
 ```tsx title="usage.tsx"
 import { SplashButton } from "../buttoncn/splash-button";
 
 const SplashButtonPreview = () => {
-    return (
-        <div>
-            <SplashButton variant="primary" >
-                Hover Me
-            </SplashButton>
-        </div>
-    );
+  return (
+    <div>
+      <SplashButton variant="primary">Hover Me</SplashButton>
+    </div>
+  );
 };
 
 export default SplashButtonPreview;
 ```
-
 
 ### Variant Secondary
 
-
-<Preview link="splash-button" >
-    <SplashButtonPreviewSecondary />
+<Preview link="splash-button">
+  <SplashButtonPreviewSecondary />
 </Preview>
 
 ```tsx title="usage.tsx"
 import { SplashButton } from "../buttoncn/splash-button";
 
 const SplashButtonPreview = () => {
-    return (
-        <div>
-            <SplashButton variant="secondary" >
-                Hover Me
-            </SplashButton>
-        </div>
-    );
+  return (
+    <div>
+      <SplashButton variant="secondary">Hover Me</SplashButton>
+    </div>
+  );
 };
 
 export default SplashButtonPreview;
 ```
 
-
 ### Variant Outline
 
-
-<Preview link="splash-button" >
-    <SplashButtonPreviewOutline />
+<Preview link="splash-button">
+  <SplashButtonPreviewOutline />
 </Preview>
 
-```tsx title="usage.tsx"
+````tsx title="usage.tsx"
 import { SplashButton } from "../buttoncn/splash-button";
 
 const SplashButtonPreview = () => {
@@ -129,7 +123,7 @@ const SplashButtonPreview = () => {
 };
 
 export default SplashButtonPreview;
-```
+````
 
 ## API Reference
 
@@ -160,5 +154,6 @@ The **Splash Button** component is a wrapper around the **button** element that 
 
       type: "string",
     }
-  }}
+
+}}
 />
