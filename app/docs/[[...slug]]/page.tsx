@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import Preview from '@/components/mdx/preview';
 import { PreviewClient } from '@/components/mdx/preview-client';
+
 export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
   const params = await props.params;
   const page = source.getPage(params.slug);
@@ -24,6 +25,7 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
             a: createRelativeLink(source, page),
             Preview,
             PreviewClient,
+           
           })}
         />
       </DocsBody>
