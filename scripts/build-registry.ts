@@ -9,9 +9,7 @@ const PUBLIC_FOLDER_BASE_PATH = "public/r";
 
 type File = z.infer<typeof registryitemFileType>;
 
-/**
- * Ensures path is project-relative (NO leading slash)
- */
+
 function normalizeRegistryPath(p: string) {
   return p.replace(/^\/+/, "");
 }
@@ -36,11 +34,10 @@ const getComponentsFile = async (files: File[], registryType: string) => {
         type: registryType,
         content: fileContent,
         path: normalizedPath,
-        target: `components/ui/${fileName}`, // SAFE target
+        target: `components/ui/${fileName}`, 
       };
     }
 
-    // CASE 2 — object file
     const normalizedPath = normalizeRegistryPath(file.path);
     const filePath = path.join(REGISTRY_BASE_PATH, normalizedPath);
     const fileContent = await fs.readFile(filePath, "utf-8");

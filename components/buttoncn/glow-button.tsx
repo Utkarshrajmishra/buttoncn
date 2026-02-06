@@ -13,7 +13,7 @@ const GlowButton = React.forwardRef<HTMLButtonElement, GlowButtonProps>(
 
         <div className="absolute inset-0 z-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-500 blur-2xl bg-gradient-to-r from-green-500 to-yellow-500" />
 
-        <div className="relative rounded-xl p-[2px] bg-gradient-to-r from-green-500 to-yellow-500">
+        <div className="relative rounded-xl p-[1px] bg-gradient-to-r from-green-500 to-yellow-500">
           
        
           <button

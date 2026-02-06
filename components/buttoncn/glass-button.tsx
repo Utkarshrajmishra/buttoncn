@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 
 export interface GlassyButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children?: React.ReactNode
+children?: React.ReactNode
 }
 
 const GlassyButton = React.forwardRef<HTMLButtonElement, GlassyButtonProps>(
