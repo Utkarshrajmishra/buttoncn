@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Sora } from "next/font/google";
 import "./globals.css";
 import { RootProvider } from "fumadocs-ui/provider/next";
-import DefaultSearchDialog from "@/components/landing/search";
+
+
+
+const sora=Sora({
+  variable:"--font-sora",
+  subsets:["latin"]
+})
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

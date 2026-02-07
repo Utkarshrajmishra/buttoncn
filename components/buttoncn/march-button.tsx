@@ -50,7 +50,7 @@ const MarchButton = React.forwardRef<HTMLButtonElement, MarchButtonProps>(
             "px-6 py-3 font-semibold text-base rounded cursor-pointer border transition-all duration-200",
             isHovered
               ? "text-white border-transparent shuttle-btn-active"
-              : "text-neutral-700 dark:text-white border-neutral-400 dark:border-neutral-700 bg-neutral-800",
+              : "text-neutral-200 dark:text-white border-neutral-400 dark:border-neutral-700 bg-neutral-800",
             className
           )}
           style={

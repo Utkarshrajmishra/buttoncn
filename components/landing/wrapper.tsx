@@ -7,7 +7,7 @@ interface WrapperProps {
 
 const Wrapper = ({ children, className }: WrapperProps) => {
   return (
-    <section className={cn("h-fit  w-full max-w-6xl px-4", className)}>
+    <section className={cn("h-fit  w-full max-w-6xl ", className)}>
       {children}
     </section>
   );
