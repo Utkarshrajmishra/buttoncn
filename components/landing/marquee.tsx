@@ -31,27 +31,27 @@ const buttons = [
 
 const Marquee = () => {
   return (
-    <div className="relative w-full overflow-hidden mt-12">
+    <div className="relative w-full overflow-hidden mt-8 sm:mt-10 md:mt-12">
 
-      {/* Fade edges */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-background to-transparent z-10" />
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-background to-transparent z-10" />
+      
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-12 sm:w-16 md:w-24 bg-gradient-to-r from-background to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-12 sm:w-16 md:w-24 bg-gradient-to-l from-background to-transparent z-10" />
 
       <motion.div
-        className="flex gap-5 w-max"
+        className="flex gap-3 sm:gap-4 md:gap-5 w-max"
         animate={{ x: ["0%", "-50%"] }}
         transition={{
           ease: "linear",
-          duration: 35, // slightly slower = more premium
+          duration: 35,
           repeat: Infinity,
         }}
       >
         {[...buttons, ...buttons].map((button, index) => (
           <div
             key={index}
-            className="bg-neutral-800/80 border border-neutral-700 backdrop-blur-sm px-4 py-2 rounded-lg flex items-center justify-center shadow-md"
+            className="bg-neutral-800/80 border border-neutral-700 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg flex items-center justify-center shadow-md shrink-0"
           >
-            <div className="scale-90">
+            <div className="scale-75 sm:scale-85 md:scale-90">
               {button}
             </div>
           </div>
