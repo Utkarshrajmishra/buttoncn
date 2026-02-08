@@ -28,7 +28,7 @@ const Hero = () => {
             A shadcn registry <br /> of beautifully crafted buttons
           </h1>
 
-          <p className="mt-6 max-w-3xl text-neutral-400 text-base sm:text-lg md:text-xl leading-relaxed">
+          <p className="mt-6 max-w-3xl text-neutral-500 text-base sm:text-lg md:text-xl leading-relaxed">
             Beautiful, interactive buttons built for landing pages and modern
             web apps — no packages, no lock-in. The perfect companion for
             shadcn.
@@ -49,7 +49,7 @@ const Hero = () => {
             </Button>
           </div>
 
-          <div className="mt-8 flex items-center gap-6 text-neutral-400">
+          <div className="mt-8 flex items-center gap-6 text-neutral-500">
             <FaReact className="size-8" />
             <SiShadcnui className="size-5" />
             <TbBrandFramerMotion className="size-8" />
