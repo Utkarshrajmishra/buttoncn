@@ -2,7 +2,7 @@ import Wrapper from "./wrapper";
 
 const Features = () => {
   return (
-    <section className="flex justify-center mt-20">
+    <section className="flex justify-center mt-14">
       <Wrapper className="py-16 px-4 sm:px-6">
         <div className="text-center mb-12 ">
           <p className="text-sm text-neutral-500 uppercase tracking-wider">
