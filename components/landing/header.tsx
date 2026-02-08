@@ -15,7 +15,7 @@ const Header = () => {
         <h1 className="text-neutral-100 gap-1.5 sm:gap-2 font-sarpanch flex items-center tracking-tight text-lg sm:text-xl font-semibold">
           <Logo className="h-4 sm:h-5 w-auto shrink-0" />
           <span className="hidden xs:inline">Fluxbuttons</span>
-          <span className="xs:hidden">Flux</span>
+          <span className="xs:hidden">Fluxbuttons</span>
         </h1>
 
         <nav
