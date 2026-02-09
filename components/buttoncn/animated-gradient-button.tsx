@@ -51,7 +51,6 @@ const GradientGlowButton = React.forwardRef<
         }}
       />
 
-      {/* 🏷 Label */}
       <span
         className={cn(
           "relative z-10 flex h-[45px] w-[156px] items-center justify-center rounded-[22px] bg-gradient-to-b from-[#2b2b2b] to-[#444]",

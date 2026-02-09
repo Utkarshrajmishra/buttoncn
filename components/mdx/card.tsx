@@ -1,5 +1,3 @@
-import { div, section } from "framer-motion/client"
-
 interface CardProps{
     text:string
 }

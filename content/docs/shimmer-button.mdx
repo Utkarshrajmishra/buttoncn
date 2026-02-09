@@ -12,18 +12,66 @@ import { TypeTable } from "fumadocs-ui/components/type-table";
 
 ## Installation
 
-```npm
-npx shadcn@latest add http://localhost:3000/r/shimmer-button.json
+
+<Tabs items={['Command', 'Manual']}
+ className="bg-transparent border-none"
+>
+  <Tab value="Command" className="bg-transparent">
+  ```npm
+ npx shadcn@latest add https://fluxbuttons.vercel.app/r/shimmer-button.json
 ```
+  </Tab>
+  <Tab value="Manual" className="bg-transparent border">
+  ```tsx title="splash-button.tsx"
+"use client";
+
+import * as React from "react";
+import { cn } from "@/lib/utils";
+
+export interface ShimmerButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+
+const ShimmerButton = React.forwardRef<HTMLButtonElement, ShimmerButtonProps>(
+  ({ children, className, ...props }, ref) => {
+    return (
+      <button
+        ref={ref}
+        {...props}
+        className={cn(
+          "group/button text-lg relative inline-flex items-center justify-center overflow-hidden rounded-md bg-neutral-800 backdrop-blur-lg px-6 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20",
+          className,
+        )}
+      >
+        {children}
+        <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]">
+          <div className="relative h-full w-10 bg-white/20" />
+        </div>
+      </button>
+    );
+  },
+);
+
+ShimmerButton.displayName = "ShimmerButton";
+
+export default ShimmerButton;
+
+```
+  </Tab>
+</Tabs>
 
 ## Usage
 
 ```tsx title="usage.tsx"
-import BrokenButton from "@/components/buttoncn/broken-button";
+import ShimmerButton from "@/components/ui/shimmer-button";
 
-export default function Usage() {
-  return <BrokenButton />;
-}
+const ShimmerButtonPreview = () => {
+    return (
+        <div>
+            <ShimmerButton>Hover Me</ShimmerButton>
+        </div>
+    );
+};
+
+export default ShimmerButtonPreview
 ```
 
 ### API Reference

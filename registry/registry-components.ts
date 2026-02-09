@@ -134,6 +134,18 @@ export const component: Registry = [
     ],
   },
   {
+    name: "pixel-button",
+    type: "registry:component",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "components/buttoncn/pixel-button.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
     name: "slant-button",
     type: "registry:component",
     dependencies: ["lucide-react"],

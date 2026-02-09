@@ -15,18 +15,77 @@ import { TypeTable } from "fumadocs-ui/components/type-table";
 
 ## Installation
 
-```npm
-npx shadcn@latest add http://localhost:3000/r/shadow-pop-button.json
+<Tabs items={['Command', 'Manual']}
+ className="bg-transparent border-none"
+>
+  <Tab value="Command" className="bg-transparent">
+  ```npm
+ npx shadcn@latest add https://fluxbuttons.vercel.app/r/shadow-pop-button.json
 ```
+  </Tab>
+  <Tab value="Manual" className="bg-transparent border">
+  ```tsx title="shadow-button.tsx"
+"use client"
+
+import * as React from "react"
+import { cn } from "@/lib/utils"
+
+export interface ShadowPopButtonProps
+    extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    shadowColors?: [string, string]
+}
+
+const ShadowPopButton = React.forwardRef<HTMLButtonElement, ShadowPopButtonProps>(
+    ({ 
+        className, 
+        children, 
+        shadowColors = ["#F44336", "#00BCD4"],
+        ...props 
+    }, ref) => {
+        return (
+            <button
+                ref={ref}
+                className={cn(
+                    "cursor-pointer text-white uppercase bg-neutral-800  px-4 py-2 active:translate-x-0.5 active:translate-y-0.5 transition",
+                    className
+                )}
+                style={{
+                    boxShadow: undefined,
+                }}
+                onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow = `0.5rem 0.5rem ${shadowColors[0]}, -0.5rem -0.5rem ${shadowColors[1]}`
+                }}
+                onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = "none"
+                }}
+                {...props}
+            >
+                {children || "Hover me"}
+            </button>
+        )
+    }
+)
+
+ShadowPopButton.displayName = "ShadowPopButton"
+
+export default ShadowPopButton
+```
+  </Tab>
+</Tabs>
+
 
 ## Usage
 
 ```tsx title="usage.tsx"
-import BrokenButton from "@/components/buttoncn/broken-button";
+import ShadowPopButton from "@/components/ui/shadow-pop-button";
 
-export default function Usage() {
-  return <BrokenButton />;
-}
+export const ShadowPopButtonPreviewShadowColors = () => {
+  return (
+    <ShadowPopButton>
+      Shadow Pop Button
+    </ShadowPopButton>
+  );
+};
 ```
 
 ## Examples
@@ -38,7 +97,7 @@ export default function Usage() {
 </Preview>
 
 ```tsx title="usage.tsx"
-import BrokenButton from "@/components/buttoncn/broken-button";
+import BrokenButton from "@/components/ui/broken-button";
 
 export const ShadowPopButtonPreviewShadowColors = () => {
   return (

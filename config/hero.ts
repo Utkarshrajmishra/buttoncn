@@ -3,7 +3,3 @@ interface Hero{
     title:string;
     description:string;
 }
-
-interface Technology{
-    
-}

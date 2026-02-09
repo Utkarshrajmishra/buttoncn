@@ -36,7 +36,8 @@ npx shadcn@latest init
 You can now start adding components to your project.
 
 ```bash
-npx shadcn@latest add @magicui/globe
+ npx shadcn@latest add https://fluxbuttons.vercel.app/r/splash-button.json
+
 ```
 
 </Step>
@@ -45,14 +46,22 @@ npx shadcn@latest add @magicui/globe
 
 ## Import component
 
-The command above will add the `Globe` component to your project. You can then import it like this:
+The command above will add the `splash-button` component to your project. You can then import it like this:
 
 ```tsx {1,6} showLineNumbers
-import { Globe } from "@/components/ui/globe"
+import { SplashButton } from "@/components/ui/splash-button"
 
-export default function Home() {
-  return <Globe />
-}
+const SplashButtonPreview = () => {
+    return (
+        <div>
+            <SplashButton >
+                Hover Me
+            </SplashButton>
+        </div>
+    );
+};
+
+export default SplashButtonPreview
 ```
 
 </Step>

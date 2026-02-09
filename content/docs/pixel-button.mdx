@@ -1,3 +1,36 @@
+---
+title: Pixel Button
+description: A retro pixel-style button with chunky layered shadows, animated dot texture, and a satisfying press interaction for a classic arcade feel.
+---
+
+import { TypeTable } from "fumadocs-ui/components/type-table";
+
+import {
+  PixelButtonPreview,
+  PixelButtonPreviewButtonColor,
+  PixelButtonPreviewButtonShadowColor,
+  PixelButtonPreviewButtonOutlineColor,
+  PixelButtonPreviewButtonBorderColor,
+  PixelButtonPreviewButtonDotColor,
+  PixelButtonPreviewButtonShadowLayers,
+} from "@/components/buttoncn-preview/bulb-button-preview";
+
+<Preview link="pixel-button">
+  <PixelButtonPreview />
+</Preview>
+
+## Installation
+
+<Tabs items={['Command', 'Manual']}
+ className="bg-transparent border-none"
+>
+  <Tab value="Command" className="bg-transparent">
+  ```npm
+ npx shadcn@latest add https://fluxbuttons.vercel.app/r/pixel-button.json
+```
+  </Tab>
+  <Tab value="Manual" className="bg-transparent border">
+  ```tsx title="splash-button.tsx"
 "use client"
 
 import * as React from "react"
@@ -18,9 +51,9 @@ const PixelButton = React.forwardRef<HTMLButtonElement, PixelButtonProps>(
     ({
         className,
         children,
-        buttonColor = "#facc15", // yellow-400
-        shadowColor = "#292524", // stone-800
-        outlineColor = "#fafaf9", // stone-50
+        buttonColor = "#facc15", 
+        shadowColor = "#292524", 
+        outlineColor = "#fafaf9", 
         borderColor = "rgba(255, 255, 255, 0.3)",
         dotColor = "rgb(255 255 255 / 80%)",
         shadowLayers = 6,
@@ -136,3 +169,117 @@ const PixelButton = React.forwardRef<HTMLButtonElement, PixelButtonProps>(
 PixelButton.displayName = "PixelButton"
 
 export default PixelButton
+```
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx title="usage.tsx"
+import BrokenButton from "@/components/ui/broken-button";
+
+export default function Usage() {
+  return <BrokenButton />;
+}
+```
+
+## Examples
+
+## Button Color
+
+<Preview link="pixel-button">
+  <PixelButtonPreviewButtonColor />
+</Preview>
+
+```tsx title="usage.tsx"
+import PixelButton from "@/components/ui/pixel-button";
+
+export default function Usage() {
+  return <PixelButton buttonColor="#15fab5ff">Click Me</PixelButton>;
+}
+```
+
+### Shadow Color
+
+<Preview link="pixel-button">
+  <PixelButtonPreviewButtonShadowColor />
+</Preview>
+
+```tsx title="usage.tsx"
+import PixelButton from "@/components/ui/pixel-button";
+
+export default function Usage() {
+  return <PixelButton shadowColor="#15fab5ff">Click Me</PixelButton>;
+}
+```
+
+### Outline Color
+
+<Preview link="pixel-button">
+  <PixelButtonPreviewButtonOutlineColor />
+</Preview>
+
+```tsx title="usage.tsx"
+import PixelButton from "@/components/ui/pixel-button";
+
+export default function Usage() {
+  return <PixelButton outlineColor="#15fab5ff">Click Me</PixelButton>;
+}
+```
+
+### Shadow Layer
+
+<Preview link="pixel-button">
+  <PixelButtonPreviewButtonShadowLayers />
+</Preview>
+
+```tsx title="usage.tsx"
+import PixelButton from "@/components/ui/pixel-button";
+
+export default function Usage() {
+  return <PixelButton shadowLayers={10}>Click Me</PixelButton>;
+}
+```
+
+## API Reference
+
+### Pixel Button
+
+The **Pixel Button** component is a wrapper around the **button** element that adds a variety of styles and functionality.
+
+<TypeTable
+  type={{
+    buttonColor: {
+      description: 'Color of the button',
+     
+      type: 'hexcode',
+      default: '#137ad5ff',
+    },
+    shadowColor:{
+        description: 'Color of the shadow',
+        type: 'hexcode',
+        default: '#137ad5ff',
+    },
+    outlineColor:{
+        description: 'Color of the outline',
+        type: 'hexcode',
+        default: '#137ad5ff',
+    },
+    borderColor:{
+        description: 'Color of the border',
+        type: 'hexcode',
+        default: '#137ad5ff',
+    },
+    shadowLayers:{
+        description: 'Number of shadow layers',
+        type: 'number',
+        default: 6,
+    },
+     className: {
+      description: "Allows additional styling to be applied to the button.",
+
+      type: "string",
+    },
+
+}}
+/>

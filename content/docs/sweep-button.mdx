@@ -17,18 +17,81 @@ import {
 
 ## Installation
 
-```npm
-npx shadcn@latest add http://localhost:3000/r/sweep-button.json
+
+<Tabs items={['Command', 'Manual']}
+ className="bg-transparent border-none"
+>
+  <Tab value="Command" className="bg-transparent">
+  ```npm
+ npx shadcn@latest add https://fluxbuttons.vercel.app/r/sweep-button.json
 ```
+  </Tab>
+  <Tab value="Manual" className="bg-transparent border">
+  ```tsx title="sweep-button.tsx"
+"use client"
+
+import * as React from "react"
+import { cn } from "@/lib/utils"
+
+export interface SweepButtonProps
+    extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+    sweepColor?: string
+    backgroundColor?: string
+  
+}
+
+const SweepButton = React.forwardRef<HTMLButtonElement, SweepButtonProps>(
+    ({ className, children, sweepColor = "#22d3ee", backgroundColor = "#083344", ...props }, ref) => {
+       
+        
+        return (
+            <button
+                ref={ref}
+                className={cn(
+                    `border border-b-4  text-white cursor-pointer font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group`,
+
+                    className
+                )}
+                style={{
+                    backgroundColor: backgroundColor,
+                   
+                    borderColor: sweepColor,
+                }}
+                {...props}
+            >
+                <span 
+                    className="absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500"
+                    style={{
+                        backgroundColor: sweepColor,
+                        boxShadow: `0 0 10px 10px ${sweepColor}33`,
+                    }}
+                ></span>
+                {children || "Hover Me"}
+            </button>
+        )
+    }
+)
+
+SweepButton.displayName = "SweepButton"
+
+export default SweepButton
+```
+  </Tab>
+</Tabs>
+
+
 
 ## Usage
 
 ```tsx title="usage.tsx"
-import BrokenButton from "@/components/buttoncn/broken-button";
+import BrokenButton from "@/components/ui/sweep-button";
 
-export default function Usage() {
-  return <BrokenButton />;
+const SweepButtonPreview=()=>{
+    return(
+        <SweepButton >Hover Me</SweepButton>
+    )
 }
+export default SweepButtonPreview
 ```
 
 ## Examples
@@ -40,7 +103,7 @@ export default function Usage() {
 </Preview>
 
 ```tsx title="usage.tsx"
-import SweepButton from "../buttoncn/sweep-button";
+import SweepButton from "@/components/ui/sweep-button";
 
 const SweepButtonPreviewSweepColor = () => {
   //The border  inherits sweepColor value by default, but can be customized using className.
@@ -58,7 +121,7 @@ export default SweepButtonPreviewSweepColor;
 </Preview>
 
 ```tsx title="usage.tsx"
-import SweepButton from "../buttoncn/sweep-button";
+import SweepButton from "@/components/ui/sweep-button";
 
 const SweepButtonPreviewSweepColor = () => {
   return <SweepButton backgroundColor="#4e2d0eff">Sweep Button</SweepButton>;

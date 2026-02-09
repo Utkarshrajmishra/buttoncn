@@ -27,7 +27,6 @@ const LikeButton = React.forwardRef<HTMLDivElement, LikeButtonProps>(
             setIsLiked(newLiked)
             onLike?.(newLiked)
             
-            // Create particle burst effect when liking
             if (newLiked) {
                 const newParticles = Array.from({length: 8}, (_, i) => ({
                     id: Date.now() + i,
@@ -37,7 +36,6 @@ const LikeButton = React.forwardRef<HTMLDivElement, LikeButtonProps>(
                 setParticles(newParticles)
                 setTimeout(() => setParticles([]), 600)
                 
-                // Show glow temporarily
                 setShowGlow(true)
                 setTimeout(() => setShowGlow(false), 800)
             }
@@ -60,7 +58,6 @@ const LikeButton = React.forwardRef<HTMLDivElement, LikeButtonProps>(
                 }}
                 {...props}
             >
-                {/* Gradient overlay */}
                 <div 
                     className="absolute inset-0 opacity-0 transition-opacity duration-300 pointer-events-none"
                     style={{
@@ -69,7 +66,6 @@ const LikeButton = React.forwardRef<HTMLDivElement, LikeButtonProps>(
                     }}
                 />
 
-                {/* Particles */}
                 {particles.map(particle => (
                     <div
                         key={particle.id}
@@ -88,7 +84,6 @@ const LikeButton = React.forwardRef<HTMLDivElement, LikeButtonProps>(
                     className="w-[70%] h-full flex cursor-pointer items-center justify-center gap-2 relative z-10"
                     onClick={handleLike}
                 >
-                    {/* Heart icon with pulse effect */}
                     <div className="relative">
                         <svg
                             className="h-7 w-7 transition-all duration-300"
@@ -116,7 +111,6 @@ const LikeButton = React.forwardRef<HTMLDivElement, LikeButtonProps>(
                     </span>
                 </label>
 
-                {/* Counter section */}
                 <div className="absolute right-0 w-[30%] h-full overflow-hidden">
                     <div
                         className="absolute inset-0 flex justify-center items-center text-base font-semibold border-l transition-all duration-500 ease-out"
@@ -144,7 +138,6 @@ const LikeButton = React.forwardRef<HTMLDivElement, LikeButtonProps>(
                     </div>
                 </div>
 
-                {/* Shine effect on hover */}
                 <div 
                     className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                     style={{

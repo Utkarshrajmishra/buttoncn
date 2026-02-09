@@ -18,6 +18,7 @@ interface PreviewProps {
 const prePath = process.env.VERCEL_PRODUCTION_URL ? process.env.VERCEL_PRODUCTION_URL : "http://localhost:3000"
 
 const Preview = ({ children, className, isPremium = false, link, useIframe = false, height, compact = false, comment = [], isBlock = false, showPreview=true }: PreviewProps) => {
+      
     return (
         <>
             <div className={cn("w-full overflow-hidden mt-4 ", className)}>
