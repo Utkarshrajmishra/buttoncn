@@ -1,0 +1,41 @@
+---
+title: Components
+description: Here you can find all the components available in the library. We are working on adding more components.
+---
+
+import Link from "next/link"
+
+## List of components
+
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+  {[
+    "splash-button",
+    "fold-button",
+    "sweep-button",
+    "rainbow-button",
+    "wave-button",
+    "shimmer-button",
+    "sweep-shimmer-button",
+    "expand-button",
+    "slide-icon-button",
+    "glow-button",
+    "shadow-pop-button",
+    "march-button",
+    "icon-button",
+    "pixel-button",
+    "glass-button",
+  ].map((slug) => (
+    <Link
+      key={slug}
+      href={`/docs/${slug}`}
+      className="no-underline  p-4  "
+    >
+      {slug
+  .split("-")
+  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(" ")
+}
+
+    </Link>
+  ))}
+</div>

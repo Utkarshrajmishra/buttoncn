@@ -22,13 +22,13 @@ const Header = () => {
           className="hidden md:flex gap-4 lg:gap-6 tracking-tight text-sm text-neutral-400"
           aria-label="Main navigation"
         >
-          <a href="#" className="hover:text-neutral-100 transition-colors">
+          <a href="/docs" className="hover:text-neutral-100 transition-colors">
             Docs
           </a>
-          <a href="#" className="hover:text-neutral-100 transition-colors">
+          <a href="/docs/installation" className="hover:text-neutral-100 transition-colors">
             Installation
           </a>
-          <a href="#" className="hover:text-neutral-100 transition-colors">
+          <a href="/docs/components" className="hover:text-neutral-100 transition-colors">
             Components
           </a>
           <a href="#" className="hover:text-neutral-100 transition-colors">
