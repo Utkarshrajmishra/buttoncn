@@ -31,9 +31,9 @@ const Header = () => {
           <a href="/docs/components" className="hover:text-neutral-100 transition-colors">
             Components
           </a>
-          <a href="#" className="hover:text-neutral-100 transition-colors">
+          {/* <a href="#" className="hover:text-neutral-100 transition-colors">
             Templates
-          </a>
+          </a> */}
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
