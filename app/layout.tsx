@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Sora, Sarpanch } from "next/font/google";
 import "./globals.css";
 import { RootProvider } from "fumadocs-ui/provider/next";
-
 const sarpanch = Sarpanch({
   variable: "--font-sarpanch",
   subsets: ["latin"],

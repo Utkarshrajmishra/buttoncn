@@ -25,6 +25,18 @@ export const component: Registry = [
       },
     ],
   },
+   {
+    name: "metal-button",
+    type: "registry:component",
+    dependencies: ["lucide-react"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "components/buttoncn/metal-button.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
   {
     name: "fold-button",
     type: "registry:component",
