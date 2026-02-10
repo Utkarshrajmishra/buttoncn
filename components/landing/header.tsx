@@ -90,7 +90,7 @@ const Header = () => {
                 Installation
               </a>
               <a
-                href="#"
+                href="/docs/components"
                 className="hover:text-neutral-100 transition-colors py-2 px-3 rounded-md hover:bg-neutral-800"
               >
                 Components
