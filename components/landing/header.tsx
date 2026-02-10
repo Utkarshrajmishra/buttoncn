@@ -25,10 +25,16 @@ const Header = () => {
           <a href="/docs" className="hover:text-neutral-100 transition-colors">
             Docs
           </a>
-          <a href="/docs/installation" className="hover:text-neutral-100 transition-colors">
+          <a
+            href="/docs/installation"
+            className="hover:text-neutral-100 transition-colors"
+          >
             Installation
           </a>
-          <a href="/docs/components" className="hover:text-neutral-100 transition-colors">
+          <a
+            href="/docs/components"
+            className="hover:text-neutral-100 transition-colors"
+          >
             Components
           </a>
           {/* <a href="#" className="hover:text-neutral-100 transition-colors">
@@ -57,7 +63,6 @@ const Header = () => {
             </div>
           </button>
 
-        
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden flex items-center justify-center rounded-md border border-neutral-800 bg-neutral-900 p-2 text-neutral-300 hover:bg-neutral-800 hover:text-white transition-all"
@@ -69,18 +74,17 @@ const Header = () => {
 
         <DefaultSearchDialog open={open} onOpenChange={setOpen} />
 
-     
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-14 left-0 right-0 bg-neutral-900 border-b border-neutral-700 backdrop-blur-md">
             <nav className="flex flex-col gap-1 p-4 text-sm text-neutral-400">
               <a
-                href="#"
+                href="/docs"
                 className="hover:text-neutral-100 transition-colors py-2 px-3 rounded-md hover:bg-neutral-800"
               >
                 Docs
               </a>
               <a
-                href="#"
+                href="/docs/installation"
                 className="hover:text-neutral-100 transition-colors py-2 px-3 rounded-md hover:bg-neutral-800"
               >
                 Installation
@@ -91,12 +95,12 @@ const Header = () => {
               >
                 Components
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="hover:text-neutral-100 transition-colors py-2 px-3 rounded-md hover:bg-neutral-800"
               >
                 Templates
-              </a>
+              </a> */}
             </nav>
           </div>
         )}
