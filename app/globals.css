@@ -1,14 +1,14 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import 'fumadocs-ui/css/neutral.css';
-@import 'fumadocs-ui/css/preset.css';
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-   --font-sans: var(--font-geist-sans);
-    --font-sora: var(--font-sora);
-    --font-sarpanch: var(--font-sarpanch);
+  --font-sans: var(--font-geist-sans);
+  --font-sora: var(--font-sora);
+  --font-sarpanch: var(--font-sarpanch);
   --font-mono: var(--font-geist-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -120,11 +120,8 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 
-
   -color-fd-background: #272121;
   --color-fd-card: rgb(23 23 23);
-
- 
 }
 
 @layer base {
@@ -135,9 +132,12 @@
     @apply bg-background text-foreground;
   }
 
-   pre code {
-    font-size: 0.94rem !important;    
-    
+  pre code {
+    font-size: 0.94rem !important;
   }
-  
+
+  [data-theme-toggle],
+  button[aria-label="Toggle theme"] {
+    display: none !important;
+  }
 }

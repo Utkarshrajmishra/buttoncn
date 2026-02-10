@@ -4,7 +4,7 @@ import { baseOptions } from '@/lib/layout.shared';
 import { SidebarSeparator } from '@/components/mdx/separator';
 export default function Layout({ children }: LayoutProps<'/docs'>) {
   return (
-    <DocsLayout tree={source.getPageTree()} {...baseOptions()}  sidebar={{
+    <DocsLayout    tree={source.getPageTree()} {...baseOptions()}  sidebar={{
     components: {
       Separator: SidebarSeparator,
     },
