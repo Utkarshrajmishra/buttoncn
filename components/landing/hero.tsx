@@ -41,7 +41,7 @@ const Hero = () => {
           </p>
 
           <div className="mt-6 sm:mt-8 px-4 sm:px-6 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 md:gap-6 w-full sm:w-auto px-4">
-            <Button className="group h-10 sm:h-11 px-5 sm:px-6 w-full sm:w-auto bg-neutral-100 text-black hover:bg-neutral-200 transition-all duration-300 hover:scale-105 text-sm sm:text-base">
+            <Button className="group h-10 text-sm sm:h-11 px-5 sm:px-6 w-full sm:w-auto bg-neutral-100 text-black hover:bg-neutral-200 transition-all duration-300 hover:scale-105  sm:text-base">
               View Components
               <ArrowRight className="ml-2 size-3 sm:size-4 transition-transform group-hover:translate-x-1" />
             </Button>

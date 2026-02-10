@@ -1,8 +1,9 @@
 // @ts-nocheck
-import * as __fd_glob_24 from "../content/docs/wave-button.mdx?collection=docs"
-import * as __fd_glob_23 from "../content/docs/sweep-shimmer-button.mdx?collection=docs"
-import * as __fd_glob_22 from "../content/docs/sweep-button.mdx?collection=docs"
-import * as __fd_glob_21 from "../content/docs/splash-button.mdx?collection=docs"
+import * as __fd_glob_25 from "../content/docs/wave-button.mdx?collection=docs"
+import * as __fd_glob_24 from "../content/docs/sweep-shimmer-button.mdx?collection=docs"
+import * as __fd_glob_23 from "../content/docs/sweep-button.mdx?collection=docs"
+import * as __fd_glob_22 from "../content/docs/splash-button.mdx?collection=docs"
+import * as __fd_glob_21 from "../content/docs/sparkle-button.mdx?collection=docs"
 import * as __fd_glob_20 from "../content/docs/slide-icon-button.mdx?collection=docs"
 import * as __fd_glob_19 from "../content/docs/slant-button.mdx?collection=docs"
 import * as __fd_glob_18 from "../content/docs/shimmer-button.mdx?collection=docs"
@@ -32,4 +33,4 @@ const create = server<typeof Config, import("fumadocs-mdx/runtime/types").Intern
   }
 }>({"doc":{"passthroughs":["extractedReferences"]}});
 
-export const docs = await create.docs("docs", "content/docs", {"meta.json": __fd_glob_0, }, {"animated-gradient-button.mdx": __fd_glob_1, "components.mdx": __fd_glob_2, "expand-button.mdx": __fd_glob_3, "fold-button.mdx": __fd_glob_4, "glass-button.mdx": __fd_glob_5, "glow-button.mdx": __fd_glob_6, "icon-button.mdx": __fd_glob_7, "index.mdx": __fd_glob_8, "installation.mdx": __fd_glob_9, "like-button.mdx": __fd_glob_10, "march-button.mdx": __fd_glob_11, "metal-button.mdx": __fd_glob_12, "peel-button.mdx": __fd_glob_13, "pixel-button.mdx": __fd_glob_14, "pluse-button.mdx": __fd_glob_15, "rainbow-button.mdx": __fd_glob_16, "shadow-pop-button.mdx": __fd_glob_17, "shimmer-button.mdx": __fd_glob_18, "slant-button.mdx": __fd_glob_19, "slide-icon-button.mdx": __fd_glob_20, "splash-button.mdx": __fd_glob_21, "sweep-button.mdx": __fd_glob_22, "sweep-shimmer-button.mdx": __fd_glob_23, "wave-button.mdx": __fd_glob_24, });
+export const docs = await create.docs("docs", "content/docs", {"meta.json": __fd_glob_0, }, {"animated-gradient-button.mdx": __fd_glob_1, "components.mdx": __fd_glob_2, "expand-button.mdx": __fd_glob_3, "fold-button.mdx": __fd_glob_4, "glass-button.mdx": __fd_glob_5, "glow-button.mdx": __fd_glob_6, "icon-button.mdx": __fd_glob_7, "index.mdx": __fd_glob_8, "installation.mdx": __fd_glob_9, "like-button.mdx": __fd_glob_10, "march-button.mdx": __fd_glob_11, "metal-button.mdx": __fd_glob_12, "peel-button.mdx": __fd_glob_13, "pixel-button.mdx": __fd_glob_14, "pluse-button.mdx": __fd_glob_15, "rainbow-button.mdx": __fd_glob_16, "shadow-pop-button.mdx": __fd_glob_17, "shimmer-button.mdx": __fd_glob_18, "slant-button.mdx": __fd_glob_19, "slide-icon-button.mdx": __fd_glob_20, "sparkle-button.mdx": __fd_glob_21, "splash-button.mdx": __fd_glob_22, "sweep-button.mdx": __fd_glob_23, "sweep-shimmer-button.mdx": __fd_glob_24, "wave-button.mdx": __fd_glob_25, });
