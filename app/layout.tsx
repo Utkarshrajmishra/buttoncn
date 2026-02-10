@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Sora, Sarpanch } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 import { RootProvider } from "fumadocs-ui/provider/next";
 const sarpanch = Sarpanch({
   variable: "--font-sarpanch",
@@ -90,6 +91,11 @@ export default function RootLayout({
         >
           {" "}
           {children}
+          <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="e4159322-9c42-41ea-bb49-042f52b3fd1a"
+         
+        />
         </RootProvider>
       </body>
     </html>
