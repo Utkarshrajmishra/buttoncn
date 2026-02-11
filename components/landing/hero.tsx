@@ -12,7 +12,7 @@ import Grain from "./grain";
 import Features from "./features";
 import FAQ from "./faq";
 import Footer from "./footer";
-
+import Link from "next/link";
 const Hero = () => {
   return (
     <section className="relative flex justify-center overflow-hidden">
@@ -41,18 +41,22 @@ const Hero = () => {
           </p>
 
           <div className="mt-6 sm:mt-8 px-4 sm:px-6 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 md:gap-6 w-full sm:w-auto px-4">
-            <Button className="group h-10 text-sm sm:h-11 px-5 sm:px-6 w-full sm:w-auto bg-neutral-100 text-black hover:bg-neutral-200 transition-all duration-300 hover:scale-105  sm:text-base">
-              View Components
-              <ArrowRight className="ml-2 size-3 sm:size-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <Link href="/docs/components">
+              <Button className="group h-10 text-sm sm:h-11 px-5 sm:px-6 w-full sm:w-auto bg-neutral-100 text-black hover:bg-neutral-200 transition-all duration-300 hover:scale-105  sm:text-base">
+                View Components
+                <ArrowRight className="ml-2 size-3 sm:size-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
 
-            <Button
-              variant="ghost"
-              className="group h-10 sm:h-11 px-5 sm:px-6 w-full sm:w-auto text-neutral-200 hover:bg-neutral-800 transition-all duration-300 hover:scale-105 text-sm sm:text-base"
-            >
-              Open Docs
-              <ArrowRight className="ml-2 size-3 sm:size-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <Link href="/docs">
+              <Button
+                variant="ghost"
+                className="group h-10 sm:h-11 px-5 sm:px-6 w-full sm:w-auto text-neutral-200 hover:bg-neutral-800 transition-all duration-300 hover:scale-105 text-sm sm:text-base"
+              >
+                Open Docs
+                <ArrowRight className="ml-2 size-3 sm:size-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
           </div>
 
           <div className="mt-6 sm:mt-8 flex items-center gap-4 sm:gap-6 text-neutral-500">
@@ -66,17 +70,12 @@ const Hero = () => {
 
         <Marquee />
 
-        <Features/>
+        <Features />
 
-        <FAQ/>
+        <FAQ />
 
-        <Footer/>
+        <Footer />
       </Wrapper>
-
-
-
-      
-      
     </section>
   );
 };
