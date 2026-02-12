@@ -21,13 +21,13 @@ const Preview = ({ children, className, isPremium = false, link, useIframe = fal
       
     return (
         <>
-            <div className={cn("w-full overflow-hidden mt-4 ", className)}>
-             <PreviewContent link={link} prePath={prePath} isBlock={isBlock} />
+            <div className={cn(" w-full  overflow-hidden mt-4 ", className)}>
+             <PreviewContent link={link} prePath={prePath} isBlock={isBlock} /> 
 
                 {
                     useIframe ?
                         (
-                            <div className="w-full mt-1 mb-8 border rounded-2xl border-zinc-400 dark:border-zinc-700">
+                            <div className=" w-full  mt-1 mb-8 border rounded-2xl border-zinc-400 dark:border-zinc-700">
                                 <div className="relative w-full h-[100dvh] overflow-hidden">
                                     <iframe src={`${prePath}/preview/${link}`} title={link} className="w-full h-full overflow-y-auto list-none" style={{ border: "none", transform: "scale(0.95)" }}></iframe>
 
@@ -37,7 +37,7 @@ const Preview = ({ children, className, isPremium = false, link, useIframe = fal
                         : (
                             <div
                                 className={cn(
-                                    "p-2 md:p-8 bg-neutral-100 dark:bg-neutral-900 flex justify-center items-center relative border rounded-2xl my-4 border-zinc-400 dark:border-zinc-800 not-prose",
+                                    "w-[95vw]  md:w-full p-2 md:p-8 bg-neutral-100 dark:bg-neutral-900 flex justify-center items-center relative border rounded-2xl my-4 border-zinc-400 dark:border-zinc-800 not-prose",
                                     compact ? "min-h-[100px]" : "min-h-[400px]",
                                     isBlock ? "md:p-0" : ""
                                 )}

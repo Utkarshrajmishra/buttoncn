@@ -19,7 +19,7 @@ export default function PreviewContent({
 
   return (
     <>
-      <div className="flex items-center justify-end">
+      <div className="md:flex hidden  w-full items-center justify-end">
         <Button
           onClick={Path}
           variant="ghost"

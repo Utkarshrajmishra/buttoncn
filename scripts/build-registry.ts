@@ -23,7 +23,6 @@ async function writeFileRecursive(filePath: string, data: string) {
 
 const getComponentsFile = async (files: File[], registryType: string) => {
   const fileArrayPromise = files.map(async (file) => {
-    // CASE 1 — string file path
     if (typeof file === "string") {
       const normalizedPath = normalizeRegistryPath(file);
       const filePath = path.join(REGISTRY_BASE_PATH, normalizedPath);

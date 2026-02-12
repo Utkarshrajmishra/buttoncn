@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { RefreshCw } from "lucide-react";
 
 interface RefreshButtonProps {
