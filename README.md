@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 FluxButtons
 
-## Getting Started
+> A curated collection of beautiful, modern, production-ready buttons
+> built with shadcn/ui + Tailwind CSS.\
+> Copy. Paste. Ship.
 
-First, run the development server:
+------------------------------------------------------------------------
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ What is FluxButtons?
+
+FluxButtons is a growing registry of aesthetic, animated, and
+interactive button components designed for modern React / Next.js
+applications.
+
+Built for: - SaaS products\
+- Landing pages\
+- Dashboards\
+- Indie hackers\
+- Product Hunt launches
+
+No bloat. No heavy dependencies. Just clean components.
+
+------------------------------------------------------------------------
+
+## 🎯 Features
+
+-   ⚡ Built with shadcn/ui
+-   🎨 Tailwind CSS powered
+-   🌙 Dark mode friendly
+-   📦 Copy-paste components
+-   🧩 Minimal & customizable
+-   🚀 Production ready
+-   🧠 Developer-first API
+
+------------------------------------------------------------------------
+
+## 🧱 Tech Stack
+
+-   Next.js
+-   React
+-   Framer Motion
+-   Tailwind CSS
+-   shadcn/ui
+-   TypeScript
+
+------------------------------------------------------------------------
+
+## 📦 Installation
+
+``` bash
+git https://github.com/Utkarshrajmishra/buttoncn.git
+cd fluxbuttons
+bun install
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+------------------------------------------------------------------------
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧩 Available Components
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-   Animated Gradient Button
+-   Glow Button
+-   Glass Button
+-   Expand Button
+-   Fold Button
+-   Icon Button
+-   Sparkle Button
+-   And more coming soon...
 
-## Learn More
+------------------------------------------------------------------------
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Example Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+``` tsx
+import { AnimatedGradientButton } from "@/components/buttons/animated-gradient-button";
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+export default function Example() {
+  return (
+    <AnimatedGradientButton>
+      Get Started
+    </AnimatedGradientButton>
+  );
+}
+```
 
-## Deploy on Vercel
+------------------------------------------------------------------------
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌍 Live Demo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+👉 https://fluxbuttons.vercel.app/
+
+------------------------------------------------------------------------
+
+## 🤝 Contributing
+
+1.  Fork the project\
+2.  Create your feature branch\
+3.  Commit your changes\
+4.  Push to the branch\
+5.  Open a Pull Request
+
+If you build a cool button animation --- submit it 🔥
+
+------------------------------------------------------------------------
+
+## ⭐ Support
+
+If you like this project: - ⭐ Star the repo - 🚀 Share it with your
+developer friends
+
