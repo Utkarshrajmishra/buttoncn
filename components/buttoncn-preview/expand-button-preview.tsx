@@ -1,28 +1,25 @@
-import { InstagramIcon } from "lucide-react"
-import ExpandButton from "../buttoncn/expand-button"
+import { InstagramIcon } from "lucide-react";
 
-const ExpandButtonIcon=()=>{
-    return(
-        <ExpandButton icon={<InstagramIcon/>}>Instagram</ExpandButton>
-    )
-}
+import ExpandButton from "../buttoncn/expand-button";
 
-const ExpandButtonColor=()=>{
-    return(
-        <ExpandButton buttonColor="#f75336ff">Expand Button</ExpandButton>
-    )
-}
+const ExpandButtonIcon = () => {
+  return <ExpandButton icon={<InstagramIcon />}>Instagram</ExpandButton>;
+};
 
-const ExpandButtonPreviewShowSpinner=()=>{
-    return(
-        <ExpandButton showSpinner={false}>Expand Button</ExpandButton>
-    )
-}
+const ExpandButtonColor = () => {
+  return <ExpandButton buttonColor="#f75336ff">Expand Button</ExpandButton>;
+};
 
+const ExpandButtonPreviewShowSpinner = () => {
+  return <ExpandButton showSpinner={false}>Expand Button</ExpandButton>;
+};
 
-const ExpandButtonPreview=()=>{
-    return(
-        <ExpandButton>Expand Button</ExpandButton>
-    )
-}
-export  {ExpandButtonPreview,ExpandButtonIcon,ExpandButtonColor,ExpandButtonPreviewShowSpinner}
+const ExpandButtonPreview = () => {
+  return <ExpandButton>Expand Button</ExpandButton>;
+};
+export {
+  ExpandButtonPreview,
+  ExpandButtonIcon,
+  ExpandButtonColor,
+  ExpandButtonPreviewShowSpinner,
+};

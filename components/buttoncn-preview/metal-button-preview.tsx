@@ -1,44 +1,25 @@
-import { MetalButton } from "../buttoncn/metal-button"; 
+import { MetalButton } from "../buttoncn/metal-button";
 
 export function MetalButtonDemo() {
-  return (
-      <MetalButton>Button</MetalButton>
-  );
+  return <MetalButton>Button</MetalButton>;
 }
 
- 
 export function MetalButtonPrimary() {
-  return (
-      <MetalButton variant="primary">Primary</MetalButton>
-  );
+  return <MetalButton variant="primary">Primary</MetalButton>;
 }
 
- 
 export function MetalButtonSuccess() {
-  return (
-      <MetalButton variant="success">Success</MetalButton>
-  );
+  return <MetalButton variant="success">Success</MetalButton>;
 }
 
- 
 export function MetalButtonError() {
-  return (
-      <MetalButton variant="error">Error</MetalButton>
-  );
+  return <MetalButton variant="error">Error</MetalButton>;
 }
 
-
- 
 export function MetalButtonGold() {
-  return (
-      <MetalButton variant="gold">Gold</MetalButton>
-  );
+  return <MetalButton variant="gold">Gold</MetalButton>;
 }
 
-
- 
 export function MetalButtonBronze() {
-  return (
-      <MetalButton variant="bronze">Bronze</MetalButton>
-  );
+  return <MetalButton variant="bronze">Bronze</MetalButton>;
 }

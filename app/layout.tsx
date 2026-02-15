@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Sora, Sarpanch } from "next/font/google";
-import "./globals.css";
+import { Geist, Geist_Mono, Sarpanch, Sora } from "next/font/google";
 import Script from "next/script";
+
 import { RootProvider } from "fumadocs-ui/provider/next";
+
+import "./globals.css";
+
 const sarpanch = Sarpanch({
   variable: "--font-sarpanch",
   subsets: ["latin"],
@@ -81,7 +84,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans `}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
         <RootProvider
           theme={{
@@ -92,10 +95,9 @@ export default function RootLayout({
           {" "}
           {children}
           <Script
-          src="https://cloud.umami.is/script.js"
-          data-website-id="e4159322-9c42-41ea-bb49-042f52b3fd1a"
-         
-        />
+            src="https://cloud.umami.is/script.js"
+            data-website-id="e4159322-9c42-41ea-bb49-042f52b3fd1a"
+          />
         </RootProvider>
       </body>
     </html>

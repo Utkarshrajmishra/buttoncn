@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { cn } from "@/lib/utils"
+import * as React from "react";
 
-export interface FoldButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  foldColor?: string
+import { cn } from "@/lib/utils";
+
+export interface FoldButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  foldColor?: string;
 }
 
 const FoldButton = React.forwardRef<HTMLButtonElement, FoldButtonProps>(
@@ -15,36 +15,34 @@ const FoldButton = React.forwardRef<HTMLButtonElement, FoldButtonProps>(
         ref={ref}
         {...props}
         className={cn(
-          "relative flex items-center cursor-pointer px-6 py-3 overflow-hidden font-medium transition-all bg-sky-500 rounded-md group",
+          "group relative flex cursor-pointer items-center overflow-hidden rounded-md bg-sky-500 px-6 py-3 font-medium transition-all",
           className
         )}
       >
-        
         <span
           style={{ backgroundColor: foldColor }}
-          className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded group-hover:-mr-4 group-hover:-mt-4"
+          className="absolute top-0 right-0 inline-block h-4 w-4 rounded transition-all duration-500 ease-in-out group-hover:-mt-4 group-hover:-mr-4"
         >
-          <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white" />
-        </span>
-
-     
-        <span
-          style={{ backgroundColor: foldColor }}
-          className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out rounded group-hover:-ml-4 group-hover:-mb-4"
-        >
-          <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white" />
+          <span className="absolute top-0 right-0 h-5 w-5 translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
         </span>
 
         <span
           style={{ backgroundColor: foldColor }}
-          className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full rounded-md group-hover:translate-x-0"
+          className="absolute bottom-0 left-0 inline-block h-4 w-4 rotate-180 rounded transition-all duration-500 ease-in-out group-hover:-mb-4 group-hover:-ml-4"
+        >
+          <span className="absolute top-0 right-0 h-5 w-5 translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
+        </span>
+
+        <span
+          style={{ backgroundColor: foldColor }}
+          className="absolute bottom-0 left-0 h-full w-full -translate-x-full rounded-md transition-all delay-200 duration-500 ease-in-out group-hover:translate-x-0"
         />
 
         <span className="relative z-10">{children}</span>
       </button>
-    )
+    );
   }
-)
+);
 
-FoldButton.displayName = "FoldButton"
-export default FoldButton
+FoldButton.displayName = "FoldButton";
+export default FoldButton;

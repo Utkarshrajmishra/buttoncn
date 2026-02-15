@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+
 import { cn } from "@/lib/utils";
 
 export interface GlowButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
@@ -8,15 +9,15 @@ export interface GlowButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
 const GlowButton = React.forwardRef<HTMLButtonElement, GlowButtonProps>(
   ({ className, children, ...props }, ref) => {
     return (
-      <div className="relative inline-block group">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-500 blur-2xl bg-gradient-to-r from-green-500 to-yellow-500" />
+      <div className="group relative inline-block">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-green-500 to-yellow-500 opacity-0 blur-2xl transition duration-500 group-hover:opacity-100" />
 
-        <div className="relative rounded-xl p-[1px] bg-gradient-to-r from-green-500 to-yellow-500">
+        <div className="relative rounded-xl bg-gradient-to-r from-green-500 to-yellow-500 p-[1px]">
           <button
             ref={ref}
             className={cn(
-              "relative flex overflow-hidden items-center justify-center whitespace-nowrap px-6 h-12 rounded-xl bg-black text-white font-semibold text-lg",
-              className,
+              "relative flex h-12 items-center justify-center overflow-hidden rounded-xl bg-black px-6 text-lg font-semibold whitespace-nowrap text-white",
+              className
             )}
             {...props}
           >
@@ -25,7 +26,7 @@ const GlowButton = React.forwardRef<HTMLButtonElement, GlowButtonProps>(
         </div>
       </div>
     );
-  },
+  }
 );
 
 GlowButton.displayName = "GlowButton";

@@ -1,47 +1,53 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { cn } from "@/lib/utils"
+import * as React from "react";
 
-export interface SweepButtonProps
-    extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    sweepColor?: string
-    backgroundColor?: string
-  
+import { cn } from "@/lib/utils";
+
+export interface SweepButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  sweepColor?: string;
+  backgroundColor?: string;
 }
 
 const SweepButton = React.forwardRef<HTMLButtonElement, SweepButtonProps>(
-    ({ className, children, sweepColor = "#22d3ee", backgroundColor = "#083344", ...props }, ref) => {
-       
-        
-        return (
-            <button
-                ref={ref}
-                className={cn(
-                    `border border-b-4  text-white cursor-pointer font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group`,
+  (
+    {
+      className,
+      children,
+      sweepColor = "#22d3ee",
+      backgroundColor = "#083344",
+      ...props
+    },
+    ref
+  ) => {
+    return (
+      <button
+        ref={ref}
+        className={cn(
+          `group relative cursor-pointer overflow-hidden rounded-md border border-b-4 px-4 py-2 font-medium text-white duration-300 outline-none hover:border-t-4 hover:border-b hover:brightness-150 active:opacity-75`,
 
-                    className
-                )}
-                style={{
-                    backgroundColor: backgroundColor,
-                   
-                    borderColor: sweepColor,
-                }}
-                {...props}
-            >
-                <span 
-                    className="absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500"
-                    style={{
-                        backgroundColor: sweepColor,
-                        boxShadow: `0 0 10px 10px ${sweepColor}33`,
-                    }}
-                ></span>
-                {children || "Hover Me"}
-            </button>
-        )
-    }
-)
+          className
+        )}
+        style={{
+          backgroundColor: backgroundColor,
 
-SweepButton.displayName = "SweepButton"
+          borderColor: sweepColor,
+        }}
+        {...props}
+      >
+        <span
+          className="absolute -top-[150%] left-0 inline-flex h-[5px] w-80 rounded-md opacity-50 duration-500 group-hover:top-[150%]"
+          style={{
+            backgroundColor: sweepColor,
+            boxShadow: `0 0 10px 10px ${sweepColor}33`,
+          }}
+        ></span>
+        {children || "Hover Me"}
+      </button>
+    );
+  }
+);
 
-export default SweepButton
+SweepButton.displayName = "SweepButton";
+
+export default SweepButton;

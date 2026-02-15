@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { cn } from "@/lib/utils"
+import * as React from "react";
 
-export interface GlassyButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-children?: React.ReactNode
+import { cn } from "@/lib/utils";
+
+export interface GlassyButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children?: React.ReactNode;
 }
 
 const GlassyButton = React.forwardRef<HTMLButtonElement, GlassyButtonProps>(
@@ -102,24 +102,22 @@ const GlassyButton = React.forwardRef<HTMLButtonElement, GlassyButtonProps>(
         <button
           ref={ref}
           className={cn(
-            "glassy-button scale-90 hover:scale-100 cursor-pointer px-5 py-2.5 h-10 min-w-[150px] rounded-[10px] outline-none relative",
+            "glassy-button relative h-10 min-w-[150px] scale-90 cursor-pointer rounded-[10px] px-5 py-2.5 outline-none hover:scale-100",
             "flex items-center justify-center gap-1 border-none bg-transparent transition-all duration-[235ms] ease-in-out",
             className
           )}
           {...props}
         >
-         
-
-          <span className="block font-semibold text-[#222222] whitespace-nowrap relative z-10">
+          <span className="relative z-10 block font-semibold whitespace-nowrap text-[#222222]">
             {children || "Join now"}
           </span>
 
-          <span className="glassy-border flex items-center justify-center absolute h-full w-full bg-transparent rounded-[10px] transition-all duration-[235ms] ease-in-out shadow-[0_0_0_2px_rgba(255,255,255,0.3)] pointer-events-none"></span>
+          <span className="glassy-border pointer-events-none absolute flex h-full w-full items-center justify-center rounded-[10px] bg-transparent shadow-[0_0_0_2px_rgba(255,255,255,0.3)] transition-all duration-[235ms] ease-in-out"></span>
         </button>
       </>
-    )
+    );
   }
-)
+);
 
-GlassyButton.displayName = "GlassyButton"
-export default GlassyButton
+GlassyButton.displayName = "GlassyButton";
+export default GlassyButton;

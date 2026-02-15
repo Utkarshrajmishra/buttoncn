@@ -4,7 +4,7 @@
 > built with shadcn/ui + Tailwind CSS.\
 > Copy. Paste. Ship.
 
-------------------------------------------------------------------------
+---
 
 ## ✨ What is FluxButtons?
 
@@ -13,6 +13,7 @@ interactive button components designed for modern React / Next.js
 applications.
 
 Built for: - SaaS products\
+
 - Landing pages\
 - Dashboards\
 - Indie hackers\
@@ -20,76 +21,72 @@ Built for: - SaaS products\
 
 No bloat. No heavy dependencies. Just clean components.
 
-------------------------------------------------------------------------
+---
 
 ## 🎯 Features
 
--   ⚡ Built with shadcn/ui
--   🎨 Tailwind CSS powered
--   🌙 Dark mode friendly
--   📦 Copy-paste components
--   🧩 Minimal & customizable
--   🚀 Production ready
--   🧠 Developer-first API
+- ⚡ Built with shadcn/ui
+- 🎨 Tailwind CSS powered
+- 🌙 Dark mode friendly
+- 📦 Copy-paste components
+- 🧩 Minimal & customizable
+- 🚀 Production ready
+- 🧠 Developer-first API
 
-------------------------------------------------------------------------
+---
 
 ## 🧱 Tech Stack
 
--   Next.js
--   React
--   Framer Motion
--   Tailwind CSS
--   shadcn/ui
--   TypeScript
+- Next.js
+- React
+- Framer Motion
+- Tailwind CSS
+- shadcn/ui
+- TypeScript
 
-------------------------------------------------------------------------
+---
 
 ## 📦 Installation
 
-``` bash
+```bash
 git https://github.com/Utkarshrajmishra/buttoncn.git
 cd fluxbuttons
 bun install
 bun run dev
 ```
 
-------------------------------------------------------------------------
+---
 
 ## 🧩 Available Components
 
--   Animated Gradient Button
--   Glow Button
--   Glass Button
--   Expand Button
--   Fold Button
--   Icon Button
--   Sparkle Button
--   And more coming soon...
+- Animated Gradient Button
+- Glow Button
+- Glass Button
+- Expand Button
+- Fold Button
+- Icon Button
+- Sparkle Button
+- And more coming soon...
 
-------------------------------------------------------------------------
+---
 
 ## 🎨 Example Usage
 
-``` tsx
+```tsx
 import { AnimatedGradientButton } from "@/components/buttons/animated-gradient-button";
 
 export default function Example() {
-  return (
-    <AnimatedGradientButton>
-      Get Started
-    </AnimatedGradientButton>
-  );
+  return <AnimatedGradientButton>Get Started</AnimatedGradientButton>;
 }
 ```
 
-------------------------------------------------------------------------
+---
 
 ## 🌍 Live Demo
 
 👉 https://fluxbuttons.vercel.app/
 
-------------------------------------------------------------------------
+---
 
 ## 🤝 Contributing
 
@@ -101,10 +98,9 @@ export default function Example() {
 
 If you build a cool button animation --- submit it 🔥
 
-------------------------------------------------------------------------
+---
 
 ## ⭐ Support
 
 If you like this project: - ⭐ Star the repo - 🚀 Share it with your
 developer friends
-

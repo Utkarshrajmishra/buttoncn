@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
+
 import { cn } from "@/lib/utils";
- 
+
 type ColorVariant =
   | "default"
   | "primary"
@@ -9,12 +10,11 @@ type ColorVariant =
   | "error"
   | "gold"
   | "bronze";
- 
-interface MetalButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+
+interface MetalButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ColorVariant;
 }
- 
+
 const colorVariants: Record<
   ColorVariant,
   {
@@ -68,20 +68,20 @@ const colorVariants: Record<
     textShadow: "[text-shadow:_0_-1px_0_rgb(124_45_18_/_100%)]",
   },
 };
- 
+
 const metalButtonVariants = (
   variant: ColorVariant = "default",
   isPressed: boolean,
   isHovered: boolean,
-  isTouchDevice: boolean,
+  isTouchDevice: boolean
 ) => {
   const colors = colorVariants[variant];
   const transitionStyle = "all 250ms cubic-bezier(0.1, 0.4, 0.2, 1)";
- 
+
   return {
     wrapper: cn(
       "relative inline-flex transform-gpu rounded-full p-[1.25px] will-change-transform",
-      colors.outer,
+      colors.outer
     ),
     wrapperStyle: {
       transform: isPressed
@@ -97,7 +97,7 @@ const metalButtonVariants = (
     },
     inner: cn(
       "absolute inset-[1px] transform-gpu rounded-full will-change-transform",
-      colors.inner,
+      colors.inner
     ),
     innerStyle: {
       transition: transitionStyle,
@@ -109,7 +109,7 @@ const metalButtonVariants = (
       "relative z-10 m-[2.5px] inline-flex h-11 transform-gpu cursor-pointer items-center justify-center overflow-hidden rounded-full px-6 pt-4 pb-4 text-md leading-none font-bold will-change-transform outline-none",
       colors.button,
       colors.textColor,
-      colors.textShadow,
+      colors.textShadow
     ),
     buttonStyle: {
       transform: isPressed ? "scale(0.97)" : "scale(1)",
@@ -120,20 +120,20 @@ const metalButtonVariants = (
     },
   };
 };
- 
+
 const ShineEffect = ({ isPressed }: { isPressed: boolean }) => {
   return (
     <div
       className={cn(
         "pointer-events-none absolute inset-0 z-20 overflow-hidden rounded-full transition-opacity duration-300",
-        isPressed ? "opacity-20" : "opacity-0",
+        isPressed ? "opacity-20" : "opacity-0"
       )}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-100 to-transparent" />
     </div>
   );
 };
- 
+
 export const MetalButton = React.forwardRef<
   HTMLButtonElement,
   MetalButtonProps
@@ -141,19 +141,19 @@ export const MetalButton = React.forwardRef<
   const [isPressed, setIsPressed] = React.useState(false);
   const [isHovered, setIsHovered] = React.useState(false);
   const [isTouchDevice, setIsTouchDevice] = React.useState(false);
- 
+
   React.useEffect(() => {
     setIsTouchDevice("ontouchstart" in window || navigator.maxTouchPoints > 0);
   }, []);
- 
+
   const buttonText = children || "Button";
   const variants = metalButtonVariants(
     variant,
     isPressed,
     isHovered,
-    isTouchDevice,
+    isTouchDevice
   );
- 
+
   const handleInternalMouseDown = () => {
     setIsPressed(true);
   };
@@ -178,7 +178,7 @@ export const MetalButton = React.forwardRef<
   const handleInternalTouchCancel = () => {
     setIsPressed(false);
   };
- 
+
   return (
     <div className={variants.wrapper} style={variants.wrapperStyle}>
       <div className={variants.inner} style={variants.innerStyle}></div>
@@ -204,5 +204,5 @@ export const MetalButton = React.forwardRef<
     </div>
   );
 });
- 
+
 MetalButton.displayName = "MetalButton";

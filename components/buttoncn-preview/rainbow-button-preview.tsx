@@ -1,9 +1,7 @@
-import RainbowButton from "../buttoncn/rainbow-button"
+import RainbowButton from "../buttoncn/rainbow-button";
 
-const RainbowButtonPreview=()=>{
-    return(
-      <RainbowButton>Hover Me </RainbowButton>
-    )
-}
+const RainbowButtonPreview = () => {
+  return <RainbowButton>Hover Me </RainbowButton>;
+};
 
-export default RainbowButtonPreview
+export default RainbowButtonPreview;

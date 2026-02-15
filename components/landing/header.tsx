@@ -1,39 +1,41 @@
 "use client";
 import { useState } from "react";
+
+import { Menu, Search } from "lucide-react";
+
+import Logo from "../svg/logo";
 import DefaultSearchDialog from "./search";
 import Wrapper from "./wrapper";
-import { Search, Menu } from "lucide-react";
-import Logo from "../svg/logo";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="h-14 border-b border-neutral-700 backdrop-blur-md flex items-center justify-center sticky top-0 z-50">
-      <Wrapper className="flex px-4 sm:px-6 items-center justify-between w-full">
-        <h1 className="text-neutral-100 gap-1.5 sm:gap-2 font-sarpanch flex items-center tracking-tight text-lg sm:text-xl font-semibold">
-          <Logo className="h-4 sm:h-5 w-auto shrink-0" />
-          <span className="hidden xs:inline">Fluxbuttons</span>
+    <header className="sticky top-0 z-50 flex h-14 items-center justify-center border-b border-neutral-700 backdrop-blur-md">
+      <Wrapper className="flex w-full items-center justify-between px-4 sm:px-6">
+        <h1 className="font-sarpanch flex items-center gap-1.5 text-lg font-semibold tracking-tight text-neutral-100 sm:gap-2 sm:text-xl">
+          <Logo className="h-4 w-auto shrink-0 sm:h-5" />
+          <span className="xs:inline hidden">Fluxbuttons</span>
           <span className="xs:hidden">Fluxbuttons</span>
         </h1>
 
         <nav
-          className="hidden md:flex gap-4 lg:gap-6 tracking-tight text-sm text-neutral-400"
+          className="hidden gap-4 text-sm tracking-tight text-neutral-400 md:flex lg:gap-6"
           aria-label="Main navigation"
         >
-          <a href="/docs" className="hover:text-neutral-100 transition-colors">
+          <a href="/docs" className="transition-colors hover:text-neutral-100">
             Docs
           </a>
           <a
             href="/docs/installation"
-            className="hover:text-neutral-100 transition-colors"
+            className="transition-colors hover:text-neutral-100"
           >
             Installation
           </a>
           <a
             href="/docs/components"
-            className="hover:text-neutral-100 transition-colors"
+            className="transition-colors hover:text-neutral-100"
           >
             Components
           </a>
@@ -45,7 +47,7 @@ const Header = () => {
         <div className="flex items-center gap-2 sm:gap-3">
           <button
             onClick={() => setOpen(true)}
-            className="flex items-center gap-2 sm:gap-4 rounded-md border border-neutral-800 bg-neutral-900 px-2.5 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-all focus:outline-none focus:ring-2 focus:ring-neutral-600"
+            className="flex items-center gap-2 rounded-md border border-neutral-800 bg-neutral-900 px-2.5 py-1.5 text-xs text-neutral-300 transition-all hover:bg-neutral-800 hover:text-white focus:ring-2 focus:ring-neutral-600 focus:outline-none sm:gap-4 sm:px-4 sm:py-2 sm:text-sm"
             aria-label="Open search dialog"
           >
             <div className="flex items-center gap-1.5 sm:gap-2">
@@ -53,11 +55,11 @@ const Header = () => {
               <span className="hidden sm:inline">Search</span>
             </div>
 
-            <div className="hidden lg:flex items-center gap-1">
-              <kbd className="text-xs bg-neutral-800 text-neutral-400 px-1.5 py-0.5 rounded">
+            <div className="hidden items-center gap-1 lg:flex">
+              <kbd className="rounded bg-neutral-800 px-1.5 py-0.5 text-xs text-neutral-400">
                 Ctrl
               </kbd>
-              <kbd className="text-xs bg-neutral-800 text-neutral-400 px-1.5 py-0.5 rounded">
+              <kbd className="rounded bg-neutral-800 px-1.5 py-0.5 text-xs text-neutral-400">
                 K
               </kbd>
             </div>
@@ -65,7 +67,7 @@ const Header = () => {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden flex items-center justify-center rounded-md border border-neutral-800 bg-neutral-900 p-2 text-neutral-300 hover:bg-neutral-800 hover:text-white transition-all"
+            className="flex items-center justify-center rounded-md border border-neutral-800 bg-neutral-900 p-2 text-neutral-300 transition-all hover:bg-neutral-800 hover:text-white md:hidden"
             aria-label="Toggle mobile menu"
           >
             <Menu className="size-4" />
@@ -75,23 +77,23 @@ const Header = () => {
         <DefaultSearchDialog open={open} onOpenChange={setOpen} />
 
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-14 left-0 right-0 bg-neutral-900 border-b border-neutral-700 backdrop-blur-md">
+          <div className="absolute top-14 right-0 left-0 border-b border-neutral-700 bg-neutral-900 backdrop-blur-md md:hidden">
             <nav className="flex flex-col gap-1 p-4 text-sm text-neutral-400">
               <a
                 href="/docs"
-                className="hover:text-neutral-100 transition-colors py-2 px-3 rounded-md hover:bg-neutral-800"
+                className="rounded-md px-3 py-2 transition-colors hover:bg-neutral-800 hover:text-neutral-100"
               >
                 Docs
               </a>
               <a
                 href="/docs/installation"
-                className="hover:text-neutral-100 transition-colors py-2 px-3 rounded-md hover:bg-neutral-800"
+                className="rounded-md px-3 py-2 transition-colors hover:bg-neutral-800 hover:text-neutral-100"
               >
                 Installation
               </a>
               <a
                 href="/docs/components"
-                className="hover:text-neutral-100 transition-colors py-2 px-3 rounded-md hover:bg-neutral-800"
+                className="rounded-md px-3 py-2 transition-colors hover:bg-neutral-800 hover:text-neutral-100"
               >
                 Components
               </a>

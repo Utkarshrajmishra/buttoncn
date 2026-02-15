@@ -1,9 +1,7 @@
-import SparkleButton from "../buttoncn/sparkle-button"
+import SparkleButton from "../buttoncn/sparkle-button";
 
-const SparkleButtonPreview=()=>{
-    return(
-        <SparkleButton>Hello World</SparkleButton>
-    )
-}
+const SparkleButtonPreview = () => {
+  return <SparkleButton>Hello World</SparkleButton>;
+};
 
-export default SparkleButtonPreview
+export default SparkleButtonPreview;

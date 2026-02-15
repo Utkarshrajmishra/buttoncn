@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { cn } from "@/lib/utils"
+import * as React from "react";
 
-export interface MarchButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  marchColor?: string[]
+import { cn } from "@/lib/utils";
+
+export interface MarchButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  marchColor?: string[];
 }
 
 const DEFAULT_MARCH_COLORS = [
@@ -15,18 +15,21 @@ const DEFAULT_MARCH_COLORS = [
   "rgb(64, 192, 87)",
   "rgb(250, 176, 5)",
   "rgb(253, 126, 20)",
-]
+];
 
 const MarchButton = React.forwardRef<HTMLButtonElement, MarchButtonProps>(
-  ({ className, children, marchColor = DEFAULT_MARCH_COLORS, ...props }, ref) => {
-    const [isHovered, setIsHovered] = React.useState(false)
+  (
+    { className, children, marchColor = DEFAULT_MARCH_COLORS, ...props },
+    ref
+  ) => {
+    const [isHovered, setIsHovered] = React.useState(false);
 
     const gradient = React.useMemo(() => {
-      const step = 100 / marchColor.length
+      const step = 100 / marchColor.length;
       return `linear-gradient(to right, ${marchColor
         .map((color, i) => `${color} ${i * step}%, ${color} ${(i + 1) * step}%`)
-        .join(", ")})`
-    }, [marchColor])
+        .join(", ")})`;
+    }, [marchColor]);
 
     return (
       <>
@@ -47,10 +50,10 @@ const MarchButton = React.forwardRef<HTMLButtonElement, MarchButtonProps>(
         <button
           ref={ref}
           className={cn(
-            "px-6 py-3 font-semibold text-base rounded cursor-pointer border transition-all duration-200",
+            "cursor-pointer rounded border px-6 py-3 text-base font-semibold transition-all duration-200",
             isHovered
-              ? "text-white border-transparent shuttle-btn-active"
-              : "text-neutral-200 dark:text-white border-neutral-400 dark:border-neutral-700 bg-neutral-800",
+              ? "shuttle-btn-active border-transparent text-white"
+              : "border-neutral-400 bg-neutral-800 text-neutral-200 dark:border-neutral-700 dark:text-white",
             className
           )}
           style={
@@ -68,9 +71,9 @@ const MarchButton = React.forwardRef<HTMLButtonElement, MarchButtonProps>(
           {children || "Join Now"}
         </button>
       </>
-    )
+    );
   }
-)
+);
 
-MarchButton.displayName = "MarchButton"
-export default MarchButton
+MarchButton.displayName = "MarchButton";
+export default MarchButton;

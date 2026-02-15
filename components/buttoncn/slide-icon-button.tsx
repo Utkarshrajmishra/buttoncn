@@ -1,18 +1,21 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { cn } from "@/lib/utils"
-import { ArrowLeft } from "lucide-react"
+import * as React from "react";
 
-export interface SlideIconButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  slideColor?: string
-  icon?: React.ReactNode
-  direction?: "left" | "right"
+import { cn } from "@/lib/utils";
+import { ArrowLeft } from "lucide-react";
+
+export interface SlideIconButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  slideColor?: string;
+  icon?: React.ReactNode;
+  direction?: "left" | "right";
 }
 
-const SlideIconButton = React.forwardRef<HTMLButtonElement, SlideIconButtonProps>(
-(
+const SlideIconButton = React.forwardRef<
+  HTMLButtonElement,
+  SlideIconButtonProps
+>(
+  (
     {
       className,
       children,
@@ -23,7 +26,7 @@ const SlideIconButton = React.forwardRef<HTMLButtonElement, SlideIconButtonProps
     },
     ref
   ) => {
-    const isLeft = direction === "left"
+    const isLeft = direction === "left";
 
     return (
       <button
@@ -31,16 +34,15 @@ const SlideIconButton = React.forwardRef<HTMLButtonElement, SlideIconButtonProps
         type="button"
         className={cn(
           "group relative h-12 overflow-hidden rounded-md",
-          "bg-white backdrop-blur-md border border-black/10",
+          "border border-black/10 bg-white backdrop-blur-md",
           "shadow-[0_4px_20px_rgba(0,0,0,0.08)]",
-          "text-black font-semibold text-base",
+          "text-base font-semibold text-black",
           "transition-all duration-300 active:scale-[0.98]",
           "px-4",
           className
         )}
         {...props}
       >
-       
         <div
           className={cn(
             "absolute top-1 bottom-1 z-10 flex items-center justify-center",
@@ -54,9 +56,9 @@ const SlideIconButton = React.forwardRef<HTMLButtonElement, SlideIconButtonProps
             {icon ? (
               icon
             ) : isLeft ? (
-              <ArrowLeft className="w-5 h-5 text-black" />
+              <ArrowLeft className="h-5 w-5 text-black" />
             ) : (
-              <svg viewBox="0 0 24 24" className="w-5 h-5 text-black">
+              <svg viewBox="0 0 24 24" className="h-5 w-5 text-black">
                 <path
                   d="M5 12h14M13 5l7 7-7 7"
                   stroke="currentColor"
@@ -76,18 +78,14 @@ const SlideIconButton = React.forwardRef<HTMLButtonElement, SlideIconButtonProps
             "transition-opacity duration-300 group-hover:opacity-0"
           )}
         >
-          {isLeft && (
-            <span className="w-5 h-5 flex-shrink-0" />
-          )}
+          {isLeft && <span className="h-5 w-5 flex-shrink-0" />}
           <span>{children || (isLeft ? "Go Back" : "Go Forward")}</span>
-          {!isLeft && (
-            <span className="w-5 h-5 flex-shrink-0" />
-          )}
+          {!isLeft && <span className="h-5 w-5 flex-shrink-0" />}
         </span>
       </button>
-    )
+    );
   }
-)
+);
 
-SlideIconButton.displayName = "SlideIconButton"
-export default SlideIconButton
+SlideIconButton.displayName = "SlideIconButton";
+export default SlideIconButton;
