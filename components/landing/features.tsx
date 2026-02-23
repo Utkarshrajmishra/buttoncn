@@ -17,7 +17,6 @@ const Features = () => {
           </p>
         </div>
 
-        {/* Feature Grid */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <div className="rounded-xl border border-neutral-800 bg-neutral-900 p-6 transition hover:border-neutral-700">
             <h3 className="text-lg font-medium text-neutral-100">
