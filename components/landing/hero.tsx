@@ -46,7 +46,7 @@ const Hero = () => {
 
           <div className="mt-6 flex w-full flex-col items-center gap-3 px-4 sm:mt-8 sm:w-auto sm:flex-row sm:gap-4 sm:px-6 md:gap-6">
             <Link href="/docs/components">
-              <Button className="group h-10 w-full bg-neutral-100 px-5 text-sm text-black transition-all duration-300 hover:scale-105 hover:bg-neutral-200 sm:h-11 sm:w-auto sm:px-6 sm:text-base">
+              <Button className="group hover:cursor-pointer h-10 w-full bg-neutral-100 px-5 text-sm text-black transition-all duration-300 hover:scale-105 hover:bg-neutral-200 sm:h-11 sm:w-auto sm:px-6 sm:text-base">
                 View Components
                 <ArrowRight className="ml-2 size-3 transition-transform group-hover:translate-x-1 sm:size-4" />
               </Button>
@@ -55,7 +55,7 @@ const Hero = () => {
             <Link href="/docs">
               <Button
                 variant="ghost"
-                className="group h-10 w-full px-5 text-sm text-neutral-200 transition-all duration-300 hover:scale-105 hover:bg-neutral-800 sm:h-11 sm:w-auto sm:px-6 sm:text-base"
+                className="group h-10 hover:cursor-pointer w-full px-5 text-sm text-neutral-200 transition-all duration-300 hover:scale-105 hover:bg-neutral-800 sm:h-11 sm:w-auto sm:px-6 sm:text-base"
               >
                 Open Docs
                 <ArrowRight className="ml-2 size-3 transition-transform group-hover:translate-x-1 sm:size-4" />
